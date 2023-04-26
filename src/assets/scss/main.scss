@@ -1,0 +1,16 @@
+@import "layout.scss";
+
+/* Scroll Bar Design for Chrome */
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #DDD;
+    border-radius: 10px;
+}

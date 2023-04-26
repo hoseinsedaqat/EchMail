@@ -1,0 +1,28 @@
+<template>
+  <article class="grid grid-cols-8 gap-4 p-3 cursor-pointer" v-for="x in 20" :key="x">
+    <div>
+      <input type="checkbox" checked="checked" class="checkbox checkbox-xs" />
+    </div>
+    <div>
+      <StarIcon :bg-color="'yellow'" />
+    </div>
+    <div class="col-span-2">
+      <p>Hosein Sedaqat</p>
+    </div>
+    <div class="col-span-3">
+      <router-link to="/">
+        <p>
+          <span> hey man whats'app - </span>
+          <span class="text-blue-400"> that awesome man ... </span>
+        </p>
+      </router-link>
+    </div>
+    <div>
+      <p>nov 28 14:12</p>
+    </div>
+  </article>
+</template>
+
+<script setup>
+import StarIcon from "vue-material-design-icons/StarOutline.vue";
+</script>
