@@ -10,7 +10,7 @@
       <p>Hosein Sedaqat</p>
     </div>
     <div class="col-span-3">
-      <router-link to="/">
+      <router-link to="/home">
         <p>
           <span> hey man whats'app - </span>
           <span class="text-blue-400"> that awesome man ... </span>
