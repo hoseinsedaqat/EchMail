@@ -22,9 +22,10 @@
       <div
         v-for="(features, idx) in side_bar_features"
         :key="(features, idx)"
-        class="my-5 cursor-pointer"
+        class="my-5 cursor-pointer flex items-center"
       >
         <img :src="features.img" :alt="features.img" class="w-10" />
+        <p class="mx-3">{{ features.title }}</p>
       </div>
     </aside>
   </section>
@@ -33,8 +34,8 @@
 
 <script setup>
 import CogOutline from "vue-material-design-icons/CogOutline.vue";
-import ModalApp from "@/components/Ui/Modal/ModalApp.vue";
 import { side_bar_features } from "@/utils/SideBarFeatures";
+import ModalApp from "@/components/Ui/Modal/ModalApp.vue";
 import AppsIcon from "vue-material-design-icons/Apps.vue";
 import user_img from "@/assets/media/img/71232870.jpg";
 </script>

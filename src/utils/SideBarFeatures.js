@@ -6,14 +6,18 @@ import GoogleKeep from '@/assets/media/img/GoogleKeep.png'
 export const side_bar_features = [
     {
         img: GoogleCalendar,
+        title: 'Calendar'
     },
     {
         img: GoogleContacts,
+        title: 'Contacts'
     },
     {
         img: GoogleKeep,
+        title: 'Keep'
     },
     {
         img: GoogleTasks,
+        title: 'Tasks'
     },
 ]

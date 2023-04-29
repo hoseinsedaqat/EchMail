@@ -26,3 +26,26 @@ export const side_bar_components = [
         title: 'Drafts'
     },
 ]
+export const side_bar_components_sm = [
+    {
+        components_icon: <InboxIcon />,
+        title: 'Inbox',
+
+    },
+    {
+        components_icon: <StarOutlineIcon />,
+        title: 'Starred'
+    },
+    {
+        components_icon: <ClockOutlineIcon />,
+        title: 'Snoozed'
+    },
+    {
+        components_icon: <SendOutlineIcon />,
+        title: 'Sent'
+    },
+    {
+        components_icon: <FileOutlineIcon />,
+        title: 'Drafts'
+    },
+]
