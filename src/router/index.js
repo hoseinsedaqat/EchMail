@@ -3,16 +3,21 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'inboxView',
+    name: 'InboxView',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '@/views/Inbox/InboxView.vue')
   },
   {
-    path: '/home',
-    name: 'HomeView',
-    component: () => import('@/views/HomeView.vue')
+    path: '/calendar',
+    name: 'CalendarView',
+    component: () => import('@/views/Calendar/CalendarView.vue')
+  },
+  {
+    path: '/message/:id',
+    name: 'MessageView',
+    component: () => import('@/views/Message/MessageView.vue')
   },
 ]
 
