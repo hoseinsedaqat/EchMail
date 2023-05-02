@@ -19,6 +19,16 @@ const routes = [
     name: 'MessageView',
     component: () => import('@/views/Message/MessageView.vue')
   },
+  {
+    path: '/starred',
+    name: 'StarredView',
+    component: () => import('@/views/Starred/StarredView.vue')
+  },
+  {
+    path: '/sent',
+    name: 'SentView',
+    component: () => import('@/views/Sent/SentView.vue')
+  }
 ]
 
 const router = createRouter({

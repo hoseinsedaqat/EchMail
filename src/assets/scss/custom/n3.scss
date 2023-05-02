@@ -1,0 +1,22 @@
+// n3
+#n3 {
+    position: sticky;
+    top: 5px;
+    width: $w-15;
+    margin: 1.5rem;
+    display: $d-flex;
+    flex-direction: $d-flex-column;
+    align-items: $d-flex-start;
+    justify-content: $d-flex-end;
+    & article {
+        display: $d-flex;
+        align-items: $d-flex-center;
+        justify-content: $d-flex-center;
+    }
+    & aside {
+        display: $d-flex;
+        flex-direction: $d-flex-column;
+        align-items: $d-flex-start;
+        justify-content: $d-flex-start;
+    }
+}

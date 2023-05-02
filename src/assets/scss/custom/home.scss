@@ -1,0 +1,21 @@
+
+#home {
+    height: 80vh;
+    overflow-y: auto;
+    & nav {
+        display: $d-flex;
+        align-items: $d-flex-center;
+        justify-content: $d-flex-between;
+        border-bottom: 1px solid #eee;
+        border-radius: 5px;
+        & div {
+            margin: 0.5rem;
+            &:nth-child(1) {
+                display: $d-flex;
+                svg {
+                    margin: 0 0.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+#calendar {
+    height: 80vh;
+    overflow-y: auto;
+    & nav {
+        width: $max-width;
+        display: $d-flex;
+        align-items: $d-flex-center;
+        div {
+            margin: 0.2rem;
+            & .add_title_btn {
+                margin: 2rem 0 0 0;
+            }
+        }
+    }
+}

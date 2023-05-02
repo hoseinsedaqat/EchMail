@@ -1,0 +1,96 @@
+// n1
+#n1 {
+    // position: a;
+    // top: 5px;
+    position: relative;
+    width: $w-15;
+    margin: $margin-1;
+    display: $d-flex;
+    flex-direction: $d-flex-column;
+    .left-aside-container {
+        display: $d-flex;
+        flex-direction: $d-flex-column;
+        & #left-2 article a {
+            width: $max-width;
+            display: $d-flex;
+            align-items: $d-flex-center;
+            justify-content: $d-flex-between;
+            margin: 0.5rem 0;
+            padding: 0.8rem 0.4rem;
+            &:hover {
+                background: $color_1;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+            & div:nth-child(1) {
+                display: $d-flex;
+                & p {
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+    .left-aside-container-sm {
+        width: 80%;
+        display: $d-flex;
+        flex-direction: $d-flex-column;
+        & #left-2 article {
+            width: $max-width;
+            display: $d-flex;
+            align-items: $d-flex-center;
+            justify-content: $d-flex-between;
+            margin: 0.5rem 0;
+            padding: 0.8rem 0.4rem;
+            &:hover {
+                // background: $color_1;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+            & div:nth-child(1) {
+                display: $d-flex;
+                & p {
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+    & #new-message {
+        background-color: #fff;
+        position: fixed;
+        width: 400px;
+        bottom: 0;
+        right: 300px;
+        z-index: 1;
+        .nmh {
+            background-color: #333;
+            border-radius: 5px 5px 0 0;
+            padding: 0.5rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .nmh-icon {
+                display: flex;
+                svg {
+                    margin: 0 0.3rem;
+                    cursor: pointer;
+                }
+            }
+        }
+        .nmc {
+            margin: 0.5rem;
+            input {
+                border: none;
+                padding: 0.5rem;
+                margin: 0.5rem 0;
+                border-bottom: 1px solid #eee;
+                width: 100%;
+            }
+            textarea {
+                width: 100%;
+                resize: none;
+                border: 1px solid #eee;
+            }
+        }
+    }
+}

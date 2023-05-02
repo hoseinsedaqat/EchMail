@@ -1,0 +1,23 @@
+// n2
+#n2 {
+    width: $w-70;
+    margin: 1.5rem;
+    display: $d-flex;
+    flex-direction: $d-flex-column;
+    & div.form-control {
+        position: sticky;
+        top: 5px;
+    }
+    & .layout-input {
+        width: $max-width;
+        --tw-ring-offset-width: 0px;
+        --tw-ring-offset-color: none;
+        --tw-ring-color: none;
+        --tw-ring-offset-shadow: none;
+        --tw-ring-shadow: none;
+        border-color: #e1e1e1;
+        box-shadow: none;
+        outline: none;
+        outline-offset: none;
+    }
+}
