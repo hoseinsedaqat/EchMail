@@ -69,12 +69,12 @@
       </div>
       <!-- content -->
       <div class="nmc">
-        <input type="email" placeholder="To" />
-        <input type="text" placeholder="Subject" />
-        <textarea class="textarea" placeholder="Message" rows="7"></textarea>
+        <input type="email" placeholder="To" v-model="layout_store.to"/>
+        <input type="text" placeholder="Subject" v-model="layout_store.subject"/>
+        <textarea class="textarea" placeholder="Message" rows="7" v-model="layout_store.message"></textarea>
       </div>
       <!-- footer -->
-      <button class="btn btn-info btn-sm my-2 mx-2">Send Message</button>
+      <button class="btn btn-info btn-sm my-2 mx-2" @click="layout_store.sent_message()">Send Message</button>
     </article>
   </section>
 </template>

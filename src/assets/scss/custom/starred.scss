@@ -7,4 +7,10 @@
         align-items: $d-flex-center;
         justify-content: $d-flex-center;
     }
+    article {
+        border: 1px solid #DDD;
+        &:hover {
+            box-shadow: 1px 3px 10px rgba(0,0,0,0.3);
+        }
+    }
 }

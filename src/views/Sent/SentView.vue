@@ -1,33 +1,31 @@
 <template>
   <section id="sent">
-    <div class="empty" v-if="true">
+    <div class="empty" v-if="layout_store.get_sents_length === 0 ? true : false">
       <p class="text-2xl">Nothing In sent</p>
     </div>
     <article
-      class="grid grid-cols-8 gap-4 p-3 cursor-pointer"
-      v-for="x in 3"
-      :key="x"
+      class="grid grid-cols-8 items-center p-3 cursor-pointer"
+      v-for="(msg,idx) in layout_store.sents"
+      :key="(msg,idx)"
       v-else
     >
-      <div>
-        <input type="checkbox" checked="checked" class="checkbox checkbox-xs" />
-      </div>
-      <div>
-        <StarIcon :bg-color="'yellow'" />
+      <div class="flex items-center">
+        <input type="checkbox" class="checkbox checkbox-xs" />
+        <StarIcon :color="'yellow'" class="mx-2"/>
       </div>
       <div class="col-span-2">
-        <p>Hosein Sedaqat</p>
+        <p>{{ msg.to.substring(0,15) + ' ...' }}</p>
       </div>
-      <div class="col-span-3">
-        <router-link to="/message/4236589">
+      <div class="col-span-4">
+        <router-link :to="'/message/'+`${msg.id}`">
           <p>
-            <span> hey man whats'app - </span>
-            <span class="text-blue-400"> that awesome man ... </span>
+            <span> {{msg.subject.substring(0,25) + '...'}} - </span>
+            <span class="text-blue-400"> {{ msg.message.substring(0,15) + ' ...' }} </span>
           </p>
         </router-link>
       </div>
       <div>
-        <p>nov 28 14:12</p>
+        <p class="text-sm">{{ msg.time }}</p>
       </div>
     </article>
   </section>
@@ -35,4 +33,6 @@
 
 <script setup>
 import StarIcon from "vue-material-design-icons/StarOutline.vue";
+import { layout } from "@/store/module/layout";
+const layout_store = layout();
 </script>
