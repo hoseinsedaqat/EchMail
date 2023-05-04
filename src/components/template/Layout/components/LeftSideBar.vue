@@ -16,7 +16,7 @@
       <section class="mt-7 mb-4" id="left-1">
         <button
           class="btn w-40 bg-info-content btn-circle"
-          @click="layout_store.open_msg_box()"
+          @click="sents_store.open_msg_box()"
         >
           <PencilOutlineIcon /> <span>Compose</span>
         </button>
@@ -40,7 +40,7 @@
       <section class="mt-7 mb-4" id="left-1">
         <button
           class="btn w-20 bg-info-content btn-circle"
-          @click="layout_store.open_msg_box()"
+          @click="sents_store.open_msg_box()"
         >
           <PencilOutlineIcon />
         </button>
@@ -57,24 +57,31 @@
         </article>
       </section>
     </aside>
-    <article id="new-message" v-if="layout_store.msg_box">
+    <article id="new-message" v-if="sents_store.msg_box" class="shadow-2xl">
       <!-- header -->
       <div class="nmh">
         <p>New Message</p>
         <p class="nmh-icon">
           <MinusIcon />
           <ArrowExpand />
-          <Close @click="layout_store.close_msg_box()" />
+          <Close @click="sents_store.close_msg_box()" />
         </p>
       </div>
       <!-- content -->
       <div class="nmc">
-        <input type="email" placeholder="To" v-model="layout_store.to"/>
-        <input type="text" placeholder="Subject" v-model="layout_store.subject"/>
-        <textarea class="textarea" placeholder="Message" rows="7" v-model="layout_store.message"></textarea>
+        <input type="email" placeholder="To" v-model="sents_store.to" />
+        <input type="text" placeholder="Subject" v-model="sents_store.subject" />
+        <textarea
+          class="textarea"
+          placeholder="Message"
+          rows="7"
+          v-model="sents_store.message"
+        ></textarea>
       </div>
       <!-- footer -->
-      <button class="btn btn-info btn-sm my-2 mx-2" @click="layout_store.sent_message()">Send Message</button>
+      <button class="btn btn-info btn-sm my-2 mx-2" @click="sents_store.sent_message()">
+        Send Message
+      </button>
     </article>
   </section>
 </template>
@@ -89,6 +96,9 @@ import MenuIcon from "vue-material-design-icons/Menu.vue";
 import gmail_logo from "@/assets/media/img/GmailLogo.png";
 import Close from "vue-material-design-icons/Close.vue";
 import { layout } from "@/store/module/layout";
+import { sents } from "@/store/module/sents";
 // layout
 const layout_store = layout();
+// sents
+const sents_store = sents();
 </script>

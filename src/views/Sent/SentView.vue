@@ -1,11 +1,11 @@
 <template>
   <section id="sent">
-    <div class="empty" v-if="layout_store.get_sents_length === 0 ? true : false">
-      <p class="text-2xl">Nothing In sent</p>
+    <div class="empty" v-if="sents_store.get_sents_length === 0 ? true : false">
+      <p class="text-2xl">Nothing In Sent</p>
     </div>
     <article
       class="grid grid-cols-8 items-center p-3 cursor-pointer"
-      v-for="(msg,idx) in layout_store.sents"
+      v-for="(msg,idx) in sents_store.sents"
       :key="(msg,idx)"
       v-else
     >
@@ -33,6 +33,6 @@
 
 <script setup>
 import StarIcon from "vue-material-design-icons/StarOutline.vue";
-import { layout } from "@/store/module/layout";
-const layout_store = layout();
+import { sents } from "@/store/module/sents";
+const sents_store = sents();
 </script>

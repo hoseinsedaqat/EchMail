@@ -3,27 +3,9 @@
   <section id="n3" class="flex items-center flex-row justify-center mx-3">
     <article>
       <div class="mx-2 dropdown dropdown-end">
-        <label tabindex="0">
+        <label for="my-modal-3">
           <CogOutline class="cursor-pointer" />
         </label>
-        <ul
-          tabindex="0"
-          class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-96"
-        >
-          <div class="text-center">
-            <label for="upload_img">
-              Upload Img
-            </label>
-            <input
-              type="file"
-              name="upload_img"
-              id="upload_img"
-              @change="onFileChange($event)"
-              class="file-input my-3"
-              style="display:none;"
-            />
-          </div>
-        </ul>
       </div>
       <div class="mx-2 dropdown dropdown-end">
         <label tabindex="0">
@@ -88,7 +70,7 @@
       <div class="user-profile ml-2 dropdown dropdown-end">
         <label tabindex="0">
           <img
-            :src="img"
+            :src="layout_store.img"
             alt="user-profile"
             class="rounded-full w-12 h-12 cursor-pointer"
           />
@@ -98,8 +80,8 @@
           class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-96"
         >
           <div class="text-center">
-            <p class="my-2">Hosein Sedaqat</p>
-            <p class="my-2">hsedaqat1378@gmail.com</p>
+            <p class="my-2">Name: {{ layout_store.user_name }}</p>
+            <p class="my-2">Account: {{ layout_store.user_mail }}</p>
             <button class="btn btn-info btn-sm my-2">Sign out</button>
           </div>
         </ul>
@@ -118,6 +100,7 @@
       </div>
     </aside>
   </section>
+  <modal-app></modal-app>
   <!-- fix img in all pages sents and data message is diffrent -->
 </template>
 
@@ -130,6 +113,7 @@ import GooglePhotos from "@/assets/media/img/GooglePhotos.webp";
 import GoogleSheets from "@/assets/media/img/GoogleSheets.webp";
 import GoogleGmail from "@/assets/media/img/GoogleGmail.webp";
 import GoogleTasks from "@/assets/media/img/GoogleTasks.png";
+import ModalApp from "@/components/Ui/Modal/ModalApp.vue";
 import GoogleEarth from "@/assets/media/img/GoogleEarth.png";
 import { side_bar_features } from "@/utils/SideBarFeatures";
 import GoogleMeet from "@/assets/media/img/GoogleMeet.webp";
@@ -138,23 +122,11 @@ import GoogleDocs from "@/assets/media/img/GoogleDocs.webp";
 import GoogleKeep from "@/assets/media/img/GoogleKeep.png";
 import AppsIcon from "vue-material-design-icons/Apps.vue";
 import user_img from "@/assets/media/img/71232870.jpg";
-import { ref, onMounted } from "vue";
-const img = ref("");
-
-function onFileChange(e) {
-  try {
-    var reader = new FileReader();
-    reader.onload = () => {
-      img.value = reader.result;
-    };
-
-    reader.readAsDataURL(e.target.files[0]);
-  } catch (e) {
-    alert("Please Upload Image");
-  }
-}
+import { layout } from "@/store/module/layout";
+import { onMounted } from "vue";
+const layout_store = layout();
 
 onMounted(() => {
-  img.value = user_img;
+  layout_store.img = user_img;
 });
 </script>

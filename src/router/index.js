@@ -28,6 +28,16 @@ const routes = [
     path: '/sent',
     name: 'SentView',
     component: () => import('@/views/Sent/SentView.vue')
+  },
+  {
+    path: '/contacts',
+    name: 'ContactsView',
+    component: () => import('@/views/Contacts/ContactsView.vue')
+  },
+  {
+    path: '/contact/create',
+    name: 'ContactCreateView',
+    component: () => import('@/views/Contacts/ContactsCreate.vue')
   }
 ]
 

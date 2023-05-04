@@ -1,39 +1,28 @@
 import { defineStore } from 'pinia';
 import { v4 as uuidv4 } from 'uuid';
 import router from '@/router';
-import moment from 'moment/moment';
+import { useToast } from 'vue-toastification'
+import { InboxMessages } from '@/constants/InboxMessages';
+
+const toast = useToast()
 
 export const layout = defineStore('layout', {
     state: () => ({
-        msg_box: false,
+        user_name: 'Hosein Sedaqat',
+        user_mail: 'hsedaqat1378@gmail.com',
+        img: '',
         aside: true,
-        sents: [],
-        inbox: [
-            {
-                id: uuidv4(),
-                to: '77hosein88@gmail.com',
-                subject: 'this is test',
-                message: 'gmail clone',
-                time: moment().format('MMMM D h:mm a'),
-                check: false 
-            }
-        ],
-        to: '',
-        subject: '',
-        message: '',
+        starred: [],
+        contacts: [],
+        inbox: InboxMessages,
     }),
     getters: {
-        get_msg_box: (state) => state.msg_box,
         get_aside: (state) => state.aside,
-        get_sents_length: (state) => state.sents.length
+        get_inbox_length: (state) => state.inbox.length,
+        get_starred_length: (state) => state.starred.length,
+        get_contacts_length: (state) => state.contacts.length,
     },
     actions: {
-        open_msg_box() {
-            this.msg_box = true
-        },
-        close_msg_box() {
-            this.msg_box = false
-        },
         aside_menu() {
             if (this.aside) {
                 this.aside = false
@@ -45,20 +34,52 @@ export const layout = defineStore('layout', {
                 document.getElementById("n2").style.width = "70%";
             }
         },
-        sent_message() {
-            this.sents.push({
-                id: uuidv4(),
-                to: this.to,
-                subject: this.subject,
-                message: this.message,
-                time: moment().format('MMMM D h:mm a'),
-                check: false
-            })
-            this.msg_box = false;
-            router.push('/sent')
+        delete_msg() {
+            if (this.inbox.filter(msg => msg.check !== false).length) {
+                this.inbox = this.inbox.filter(msg => msg.check !== true)
+                toast.success("Message Delete 😎✉")
+                return;
+            }
         },
-        delete_msg(){
-            this.inbox = this.inbox.filter(msg => msg.check !== true)
+        add_starred(id) {
+            this.inbox.map(msg => {
+                if (msg.id === id) {
+                    if (msg.starred) {
+                        msg.starred = false;
+                        this.starred = this.starred.filter(msg => msg.starred !== false);
+                        toast.error("Message UnStarred ⭐")
+                    } else {
+                        msg.starred = true;
+                        this.starred.push(msg);
+                        toast.success("Message Starred ⭐")
+                    }
+                }
+            })
+        },
+        onFileChange(e) {
+            try {
+                var reader = new FileReader();
+                reader.onload = () => {
+                    this.img = reader.result;
+                };
+
+                reader.readAsDataURL(e.target.files[0]);
+            } catch (e) {
+                toast.info("Please Upload Image")
+            }
+        },
+        setting_name_mail(name, mail) {
+            this.user_name = name
+            this.user_mail = mail
+        },
+        create_contacts(first_name, last_name, email) {
+            this.contacts.push({
+                id: uuidv4(),
+                first_name: first_name,
+                last_name: last_name,
+                email: email
+            })
+            router.push('/contacts')
         }
     }
 })

@@ -2,7 +2,7 @@
   <section id="home">
     <nav>
       <div class="cursor-pointer">
-        <ArrowLeftIcon />
+        <ArrowLeftIcon @click="back" />
         <TrashIcon />
       </div>
       <div>
@@ -33,7 +33,7 @@
       </main>
     </article>
     <article id="email-message" class="py-0 px-5">
-      <p class="text-justify">
+      <p class="text-justify break-words">
         {{ message_data.message }}
       </p>
     </article>
@@ -44,21 +44,25 @@
 import TrashIcon from "vue-material-design-icons/TrashCanOutline.vue";
 import ArrowLeftIcon from "vue-material-design-icons/ArrowLeft.vue";
 import { layout } from "@/store/module/layout";
-import { useRoute } from "vue-router";
-import { onMounted,ref } from "vue";
-const message_data = ref({})
+import { useRoute, useRouter } from "vue-router";
+import { onMounted, ref } from "vue";
+const message_data = ref({});
 const layout_store = layout();
+const router = useRouter();
 const route = useRoute();
+const back = () => {
+  router.push("/");
+};
 onMounted(() => {
-  layout_store.sents.forEach(msg => {
-    if(msg.id === route.params.id){
-      message_data.value = msg
+  layout_store.sents.forEach((msg) => {
+    if (msg.id === route.params.id) {
+      message_data.value = msg;
     }
-  })
-  layout_store.inbox.forEach(msg => {
-    if(msg.id === route.params.id){
-      message_data.value = msg
+  });
+  layout_store.inbox.forEach((msg) => {
+    if (msg.id === route.params.id) {
+      message_data.value = msg;
     }
-  })
-})
+  });
+});
 </script>

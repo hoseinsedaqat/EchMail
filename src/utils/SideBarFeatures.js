@@ -15,7 +15,7 @@ export const side_bar_features = [
     {
         img: GoogleContacts,
         title: 'Contacts',
-        link: '/'
+        link: '/contacts'
     },
     {
         img: GoogleKeep,
