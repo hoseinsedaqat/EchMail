@@ -44,17 +44,19 @@
 import TrashIcon from "vue-material-design-icons/TrashCanOutline.vue";
 import ArrowLeftIcon from "vue-material-design-icons/ArrowLeft.vue";
 import { layout } from "@/store/module/layout";
+import { sents } from "@/store/module/sents";
 import { useRoute, useRouter } from "vue-router";
 import { onMounted, ref } from "vue";
 const message_data = ref({});
 const layout_store = layout();
+const sents_store = sents();
 const router = useRouter();
 const route = useRoute();
 const back = () => {
   router.push("/");
 };
 onMounted(() => {
-  layout_store.sents.forEach((msg) => {
+  sents_store.sents.forEach((msg) => {
     if (msg.id === route.params.id) {
       message_data.value = msg;
     }
