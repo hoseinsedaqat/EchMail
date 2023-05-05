@@ -32,9 +32,7 @@
         </div>
         <button
           class="btn btn-primary w-full"
-          @click="
-            layout_store.setting_name_mail(name,email)
-          "
+          @click="setting_store.setting_name_mail(name, email)"
         >
           Sent
         </button>
@@ -45,7 +43,7 @@
           type="file"
           name="upload_img"
           id="upload_img"
-          @change="layout_store.onFileChange($event)"
+          @change="setting_store.onFileChange($event)"
           class="file-input my-3"
           style="display: none"
         />
@@ -56,13 +54,13 @@
 
 <script setup>
 // import TextInputApp from "../TextInput/TextInputApp.vue";
-import { layout } from "@/store/module/layout";
-import { ref,onMounted } from "vue";
-const name = ref('')
-const email = ref('')
-const layout_store = layout();
+import { setting } from "@/store/module/setting";
+import { ref, onMounted } from "vue";
+const name = ref("");
+const email = ref("");
+const setting_store = setting();
 onMounted(() => {
-  name.value = layout_store.user_name
-  email.value = layout_store.user_mail
-})
+  name.value = setting_store.user_name;
+  email.value = setting_store.user_mail;
+});
 </script>

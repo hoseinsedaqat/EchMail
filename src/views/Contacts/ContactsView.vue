@@ -1,6 +1,6 @@
 <template>
   <section id="contacts">
-    <div class="empty" v-if="layout_store.get_contacts_length === 0 ? true : false">
+    <div class="empty" v-if="contacts_store.get_contacts_length === 0 ? true : false">
       <p class="text-2xl">
         <router-link to="/contact/create">
           <button class="btn bg-sky-600 text-white">+ Create Contacts</button>
@@ -14,7 +14,7 @@
         <button class="btn bg-sky-600 btn-sm text-white">+ Contact Create</button>
         </router-link>
       </div>
-      <div v-for="(contact,idx) in layout_store.contacts" :key="(contact,idx)" class="flex items-center justify-between my-2 border-2 shadow-sm p-5 rounded box-shadow">
+      <div v-for="(contact,idx) in contacts_store.contacts" :key="(contact,idx)" class="flex items-center justify-between my-2 border-2 shadow-sm p-5 rounded box-shadow">
         <div>
           <AccountCircle :size="40" />
         </div>
@@ -29,6 +29,6 @@
 
 <script setup>
 import AccountCircle from "vue-material-design-icons/AccountCircle.vue";
-import { layout } from "@/store/module/layout";
-const layout_store = layout();
+import { contacts } from "@/store/module/contacts";
+const contacts_store = contacts();
 </script>

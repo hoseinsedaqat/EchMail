@@ -70,7 +70,7 @@
       <div class="user-profile ml-2 dropdown dropdown-end">
         <label tabindex="0">
           <img
-            :src="layout_store.img"
+            :src="setting_store.img"
             alt="user-profile"
             class="rounded-full w-12 h-12 cursor-pointer"
           />
@@ -80,8 +80,8 @@
           class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-96"
         >
           <div class="text-center">
-            <p class="my-2">Name: {{ layout_store.user_name }}</p>
-            <p class="my-2">Account: {{ layout_store.user_mail }}</p>
+            <p class="my-2">Name: {{ setting_store.user_name }}</p>
+            <p class="my-2">Account: {{ setting_store.user_mail }}</p>
             <button class="btn btn-info btn-sm my-2">Sign out</button>
           </div>
         </ul>
@@ -122,11 +122,11 @@ import GoogleDocs from "@/assets/media/img/GoogleDocs.webp";
 import GoogleKeep from "@/assets/media/img/GoogleKeep.png";
 import AppsIcon from "vue-material-design-icons/Apps.vue";
 import user_img from "@/assets/media/img/71232870.jpg";
-import { layout } from "@/store/module/layout";
+import { setting } from "@/store/module/setting";
 import { onMounted } from "vue";
-const layout_store = layout();
+const setting_store = setting();
 
 onMounted(() => {
-  layout_store.img = user_img;
+  setting_store.img = user_img;
 });
 </script>

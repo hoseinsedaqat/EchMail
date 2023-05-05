@@ -39,7 +39,7 @@
         />
       </div>
     </article>
-    <button class="btn btn-outline" @click="layout_store.create_contacts(first_name,last_name,email)">
+    <button class="btn btn-outline" @click="contacts_store.create_contacts(first_name,last_name,email)">
       Create Contacts
     </button>
   </section>
@@ -47,10 +47,10 @@
 
 <script setup>
 import AccountCircle from "vue-material-design-icons/AccountCircle.vue";
-import { layout } from "@/store/module/layout";
+import { contacts } from "@/store/module/contacts";
 import { ref } from "vue";
 const first_name = ref("");
 const last_name = ref("");
 const email = ref("");
-const layout_store = layout();
+const contacts_store = contacts();
 </script>
