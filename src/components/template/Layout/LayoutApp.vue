@@ -7,7 +7,8 @@
 </template>
 
 <script setup>
+// import
+import RightSideBar from "./components/RightSideBar.vue";
 import LeftSideBar from "./components/LeftSideBar.vue";
 import InboxLayer from "./components/InboxLayer.vue";
-import RightSideBar from "./components/RightSideBar.vue";
 </script>

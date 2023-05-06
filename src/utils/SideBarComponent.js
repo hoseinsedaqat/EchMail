@@ -12,7 +12,7 @@ export const side_bar_components = [
     {
         components_icon: <InboxIcon />,
         title: 'Inbox',
-        details: '10',
+        details: true,
         link: '/'
     },
     {

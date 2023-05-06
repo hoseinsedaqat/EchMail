@@ -1,6 +1,7 @@
-import { defineStore } from 'pinia'
-import { useToast } from 'vue-toastification'
-const toast = useToast()
+import { closeModal } from '@/utils/closeModal';
+import { useToast } from 'vue-toastification';
+import { defineStore } from 'pinia';
+const toast = useToast();
 
 
 export const setting = defineStore('setting', {
@@ -26,6 +27,7 @@ export const setting = defineStore('setting', {
         setting_name_mail(name, mail) {
             this.user_name = name
             this.user_mail = mail
+            closeModal()
         },
     }
 })

@@ -46,9 +46,11 @@
 </template>
 
 <script setup>
+// import
 import AccountCircle from "vue-material-design-icons/AccountCircle.vue";
 import { contacts } from "@/store/module/contacts";
 import { ref } from "vue";
+// data
 const first_name = ref("");
 const last_name = ref("");
 const email = ref("");

@@ -38,7 +38,18 @@ const routes = [
     path: '/contact/create',
     name: 'ContactCreateView',
     component: () => import('@/views/Contacts/ContactsCreate.vue')
-  }
+  },
+  {
+    path: '/keep',
+    name: 'KeepView',
+    component: () => import('@/views/Keeps/KeepView.vue')
+  },
+  {
+    path: '/keep/create',
+    name: 'KeepCreateView',
+    component: () => import('@/views/Keeps/KeepCreate.vue')
+  },
+
 ]
 
 const router = createRouter({

@@ -30,7 +30,9 @@
               </p>
               <p>{{ side.title }}</p>
             </div>
-            <div v-if="side.details">{{ side.details }}</div>
+            <div class="badge badge-error text-white rounded-full" v-if="side.details">
+              {{ inbox_store.inbox.length }}
+            </div>
           </router-link>
         </article>
       </section>
@@ -87,6 +89,7 @@
 </template>
 
 <script setup>
+// import
 import PencilOutlineIcon from "vue-material-design-icons/PencilOutline.vue";
 import ArrowExpand from "vue-material-design-icons/ArrowExpand.vue";
 import { side_bar_components_sm } from "@/utils/SideBarComponent";
@@ -96,9 +99,10 @@ import MenuIcon from "vue-material-design-icons/Menu.vue";
 import gmail_logo from "@/assets/media/img/GmailLogo.png";
 import Close from "vue-material-design-icons/Close.vue";
 import { layout } from "@/store/module/layout";
+import { inbox } from "@/store/module/inbox";
 import { sents } from "@/store/module/sents";
-// layout
+// data
 const layout_store = layout();
-// sents
 const sents_store = sents();
+const inbox_store = inbox();
 </script>

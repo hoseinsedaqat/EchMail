@@ -8,6 +8,7 @@
 @import "./custom/starred.scss";
 @import "./custom/sent.scss";
 @import "./custom/contacts.scss";
+@import "./custom/keep.scss";
 
 /* Scroll Bar Design for Chrome */
 
@@ -20,6 +21,6 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #DDD;
+    background: #ddd;
     border-radius: 10px;
 }

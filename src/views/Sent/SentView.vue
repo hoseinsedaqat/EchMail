@@ -5,22 +5,24 @@
     </div>
     <article
       class="grid grid-cols-8 items-center p-3 cursor-pointer"
-      v-for="(msg,idx) in sents_store.sents"
-      :key="(msg,idx)"
+      v-for="(msg, idx) in sents_store.sents"
+      :key="(msg, idx)"
       v-else
     >
       <div class="flex items-center">
         <input type="checkbox" class="checkbox checkbox-xs" />
-        <StarIcon :color="'yellow'" class="mx-2"/>
+        <StarIcon :color="'yellow'" class="mx-2" />
       </div>
       <div class="col-span-2">
-        <p>{{ msg.to.substring(0,15) + ' ...' }}</p>
+        <p>{{ msg.to.substring(0, 15) + " ..." }}</p>
       </div>
       <div class="col-span-4">
-        <router-link :to="'/message/'+`${msg.id}`">
+        <router-link :to="'/message/' + `${msg.id}`">
           <p>
-            <span> {{msg.subject.substring(0,25) + '...'}} - </span>
-            <span class="text-blue-400"> {{ msg.message.substring(0,15) + ' ...' }} </span>
+            <span> {{ msg.subject.substring(0, 25) + "..." }} - </span>
+            <span class="text-blue-400">
+              {{ msg.message.substring(0, 15) + " ..." }}
+            </span>
           </p>
         </router-link>
       </div>
@@ -32,7 +34,9 @@
 </template>
 
 <script setup>
+// import 
 import StarIcon from "vue-material-design-icons/StarOutline.vue";
 import { sents } from "@/store/module/sents";
+// data
 const sents_store = sents();
 </script>

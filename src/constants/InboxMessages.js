@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import moment from 'moment/moment';
 
 export const InboxMessages = [
+    // i will add view for change bg-color of each msg
     {
         id: uuidv4(),
         to: '77hosein88@gmail.com',
@@ -9,7 +10,8 @@ export const InboxMessages = [
         message: 'Test Gamil Clone Successfully ✌',
         time: moment().format('MMMM D h:mm a'),
         check: false,
-        starred: false
+        starred: false,
+        from: true,
     },
     {
         id: uuidv4(),
@@ -18,7 +20,8 @@ export const InboxMessages = [
         message: 'gmail clone',
         time: 'Feb 25 10:11 am',
         check: false,
-        starred: false
+        starred: false,
+        from: true,
     },
     {
         id: uuidv4(),
@@ -27,7 +30,8 @@ export const InboxMessages = [
         message: 'Hello Hosein We are Record New Vue Course Do you wanna to Join Sir ?',
         time: 'Mar 10 3:11 am',
         check: false,
-        starred: false
+        starred: false,
+        from: true,
     },
     {
         id: uuidv4(),
@@ -36,7 +40,8 @@ export const InboxMessages = [
         message: 'Heyyy yooooo check out my new Project is Awesome dude 🍕😎',
         time: 'Sep 12 6:11 pm',
         check: false,
-        starred: false
+        starred: false,
+        from: true,
     },
     {
         id: uuidv4(),
@@ -45,6 +50,7 @@ export const InboxMessages = [
         message: 'we are resolve the bug asap i will tell in next days',
         time: 'Aug 6 9:11 am',
         check: false,
-        starred: false
+        starred: false,
+        from: true,
     },
 ]

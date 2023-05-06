@@ -3,7 +3,7 @@
     <div class="empty" v-if="contacts_store.get_contacts_length === 0 ? true : false">
       <p class="text-2xl">
         <router-link to="/contact/create">
-          <button class="btn bg-sky-600 text-white">+ Create Contacts</button>
+          <button class="btn bg-sky-600 text-white">+ Contacts Create </button>
         </router-link>
       </p>
     </div>
@@ -28,7 +28,9 @@
 </template>
 
 <script setup>
+// import
 import AccountCircle from "vue-material-design-icons/AccountCircle.vue";
 import { contacts } from "@/store/module/contacts";
+// data
 const contacts_store = contacts();
 </script>

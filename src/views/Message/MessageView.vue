@@ -17,14 +17,18 @@
         <div class="flex items-center justify-between">
           <div>
             <img
-              src="@/assets/media/img/71232870.jpg"
+              :src="setting_store.img"
               alt="Avatar"
-              class="rounded-full w-12 cursor-pointer"
+              class="rounded-full w-14 h-14 cursor-pointer"
             />
           </div>
           <div class="mx-3">
             <p>hsedaqat1378@gmail.com</p>
-            <p class="text-slate-400">to {{ message_data.to }}</p>
+            <p class="text-slate-400">
+              <span v-if="message_data.from">from</span>
+              <span v-else>to</span>
+              {{ message_data.to }}
+            </p>
           </div>
         </div>
         <div>
@@ -41,27 +45,37 @@
 </template>
 
 <script setup>
+
+// import
 import TrashIcon from "vue-material-design-icons/TrashCanOutline.vue";
 import ArrowLeftIcon from "vue-material-design-icons/ArrowLeft.vue";
-import { layout } from "@/store/module/layout";
-import { sents } from "@/store/module/sents";
+import { setting } from "@/store/module/setting";
 import { useRoute, useRouter } from "vue-router";
+import { inbox } from "@/store/module/inbox";
+import { sents } from "@/store/module/sents";
 import { onMounted, ref } from "vue";
+
+// data
+const setting_store = setting();
+const inbox_store = inbox();
 const message_data = ref({});
-const layout_store = layout();
 const sents_store = sents();
 const router = useRouter();
 const route = useRoute();
+
+// methods
 const back = () => {
-  router.push("/");
+  router.go(-1);
 };
+
+// mounted
 onMounted(() => {
   sents_store.sents.forEach((msg) => {
     if (msg.id === route.params.id) {
       message_data.value = msg;
     }
   });
-  layout_store.inbox.forEach((msg) => {
+  inbox_store.inbox.forEach((msg) => {
     if (msg.id === route.params.id) {
       message_data.value = msg;
     }

@@ -20,11 +20,11 @@ export const side_bar_features = [
     {
         img: GoogleKeep,
         title: 'Keep',
-        link: '/'
+        link: '/keep'
     },
     {
         img: GoogleTasks,
         title: 'Tasks',
-        link: '/'
+        link: '/keep'
     },
 ]

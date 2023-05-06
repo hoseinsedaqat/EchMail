@@ -1,13 +1,8 @@
 <template>
   <layout-app-vue></layout-app-vue>
-  <!-- <router-view /> -->
 </template>
 
-<script>
+<script setup>
+// import
 import LayoutAppVue from "./components/template/Layout/LayoutApp.vue";
-export default {
-  components: {
-    LayoutAppVue,
-  },
-};
 </script>

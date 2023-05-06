@@ -39,11 +39,13 @@
 </template>
 
 <script setup>
+// import
 import "../../../../node_modules/vue-simple-calendar/dist/css/holidays-us.css";
 import "../../../../node_modules/vue-simple-calendar/dist/css/default.css";
 import { CalendarView, CalendarViewHeader } from "vue-simple-calendar";
 import "../../../../node_modules/vue-simple-calendar/dist/style.css";
-import Datepicker from "vue3-datepicker";
 import { calendar } from "@/store/module/calendar";
+import Datepicker from "vue3-datepicker";
+// data
 const calendar_store = calendar();
 </script>

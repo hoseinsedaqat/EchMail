@@ -2,11 +2,11 @@
   <section id="n2">
     <div class="form-control">
       <label class="input-group">
-        <span>
+        <span class="cursor-pointer">
           <MagnifyIcon />
         </span>
         <input type="text" placeholder="Search mail" class="layout-input bg-white" />
-        <span>
+        <span class="cursor-pointer">
           <TuneIcon />
         </span>
       </label>
@@ -18,6 +18,7 @@
 </template>
 
 <script setup>
+// import
 import MagnifyIcon from "vue-material-design-icons/Magnify.vue";
 import TuneIcon from "vue-material-design-icons/Tune.vue";
 </script>

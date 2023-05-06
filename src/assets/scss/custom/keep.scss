@@ -1,0 +1,23 @@
+#keep {
+    height: 80vh;
+    overflow-y: auto;
+    .empty {
+        height: 100%;
+        display: $d-flex;
+        align-items: $d-flex-center;
+        justify-content: $d-flex-center;
+    }
+    .show_keeps {
+        .box-shadow {
+            &:hover {
+                cursor: pointer;
+                box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}
+
+#keep_create {
+    height: 80vh;
+    overflow-y: auto;
+}

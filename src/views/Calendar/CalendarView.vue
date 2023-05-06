@@ -5,5 +5,6 @@
 </template>
 
 <script setup>
+// import
 import CalendarApp from "./components/CalendarApp.vue";
 </script>

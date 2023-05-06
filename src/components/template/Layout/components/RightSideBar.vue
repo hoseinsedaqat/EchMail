@@ -100,11 +100,12 @@
       </div>
     </aside>
   </section>
+  <!-- setting-modal -->
   <modal-app></modal-app>
-  <!-- fix img in all pages sents and data message is diffrent -->
 </template>
 
 <script setup>
+// import
 import GoogleWellBeing from "@/assets/media/img/GoogleWellBeing.webp";
 import GoogleCalendar from "@/assets/media/img/GoogleCalendar.png";
 import GoogleContacts from "@/assets/media/img/GoogleContacts.png";
@@ -113,19 +114,20 @@ import GooglePhotos from "@/assets/media/img/GooglePhotos.webp";
 import GoogleSheets from "@/assets/media/img/GoogleSheets.webp";
 import GoogleGmail from "@/assets/media/img/GoogleGmail.webp";
 import GoogleTasks from "@/assets/media/img/GoogleTasks.png";
-import ModalApp from "@/components/Ui/Modal/ModalApp.vue";
 import GoogleEarth from "@/assets/media/img/GoogleEarth.png";
 import { side_bar_features } from "@/utils/SideBarFeatures";
 import GoogleMeet from "@/assets/media/img/GoogleMeet.webp";
 import GoogleHome from "@/assets/media/img/GoogleHome.webp";
 import GoogleDocs from "@/assets/media/img/GoogleDocs.webp";
 import GoogleKeep from "@/assets/media/img/GoogleKeep.png";
+import ModalApp from "@/components/Ui/Modal/ModalApp.vue";
 import AppsIcon from "vue-material-design-icons/Apps.vue";
 import user_img from "@/assets/media/img/71232870.jpg";
 import { setting } from "@/store/module/setting";
 import { onMounted } from "vue";
+// data
 const setting_store = setting();
-
+// mounted
 onMounted(() => {
   setting_store.img = user_img;
 });
