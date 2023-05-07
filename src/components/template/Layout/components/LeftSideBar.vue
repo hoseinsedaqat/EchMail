@@ -71,17 +71,23 @@
       </div>
       <!-- content -->
       <div class="nmc">
-        <input type="email" placeholder="To" v-model="sents_store.to" />
-        <input type="text" placeholder="Subject" v-model="sents_store.subject" />
+        <input
+          type="email"
+          placeholder="example: hosein@gmail.com"
+          v-model="to"
+          name="to"
+        />
+        <input type="text" placeholder="subject" v-model="subject" name="subject" />
         <textarea
           class="textarea"
           placeholder="Message"
           rows="7"
-          v-model="sents_store.message"
+          name="message"
+          v-model="message"
         ></textarea>
       </div>
       <!-- footer -->
-      <button class="btn btn-info btn-sm my-2 mx-2" @click="sents_store.sent_message()">
+      <button class="btn btn-info btn-sm my-2 mx-2" @click="sent_message()">
         Send Message
       </button>
     </article>
@@ -99,10 +105,41 @@ import MenuIcon from "vue-material-design-icons/Menu.vue";
 import gmail_logo from "@/assets/media/img/GmailLogo.png";
 import Close from "vue-material-design-icons/Close.vue";
 import { layout } from "@/store/module/layout";
+import { useToast } from "vue-toastification";
 import { inbox } from "@/store/module/inbox";
 import { sents } from "@/store/module/sents";
+import { useForm } from "vee-validate";
+import * as yup from "yup";
 // data
 const layout_store = layout();
 const sents_store = sents();
 const inbox_store = inbox();
+const toast = useToast();
+// validate
+const schema = yup.object({
+  to: yup.string().email().required(),
+  subject: yup.string().required(),
+  message: yup.string().required(),
+});
+const { useFieldModel, validate } = useForm({
+  validationSchema: schema,
+});
+
+const [to, subject, message] = useFieldModel(["to", "subject", "message"]);
+
+function sent_message() {
+  validate().then((valid) => {
+    if (valid.valid) {
+      sents_store.sent_message(to.value, subject.value, message.value);
+      toast.success("message is sent ✉✌");
+      to.value = "";
+      subject.value = "";
+      message.value = "";
+    } else {
+      for (let error in valid.errors) {
+        toast.error(valid.errors[error]);
+      }
+    }
+  });
+}
 </script>

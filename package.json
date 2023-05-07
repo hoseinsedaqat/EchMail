@@ -18,12 +18,14 @@
     "postcss": "^8",
     "tailwindcss": "^3",
     "uuid": "^9.0.0",
+    "vee-validate": "^4.8.6",
     "vue": "^3.2.13",
     "vue-material-design-icons": "^5.2.0",
     "vue-router": "^4.0.3",
     "vue-simple-calendar": "^6.3.1",
     "vue-toastification": "^2.0.0-rc.5",
-    "vue3-datepicker": "^0.3.4"
+    "vue3-datepicker": "^0.3.4",
+    "yup": "^1.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
