@@ -22,6 +22,11 @@ export const sents = defineStore('sents', {
                 toast.success("Message Delete 😎✉")
             }
         },
+        delete_msg_by_id(id) {
+            this.sents = this.sents.filter(msg => msg.id !== id)
+            router.push('/sent')
+            toast.success('Message Delete 😎✉')
+        },
         sent_message(to, subject, message) {
             this.sents.push({
                 id: uuidv4(),

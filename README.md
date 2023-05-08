@@ -1,4 +1,8 @@
-# echmail
+# Echmail 📧🍍😎
+
+<div align="center">
+  <img width=100% height="100%" src="https://user-images.githubusercontent.com/71232870/236755573-3f7d030f-5f30-4e70-8ea4-10f5f67546e6.png" />
+</div>
 
 ## Project setup
 ```

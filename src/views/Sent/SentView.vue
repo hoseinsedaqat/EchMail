@@ -22,7 +22,7 @@
           <p>{{ msg.to.substring(0, 15) + " ..." }}</p>
         </div>
         <div class="col-span-4">
-          <router-link :to="'/message/' + `${msg.id}`">
+          <router-link :to="'/message/sent/' + `${msg.id}`">
             <p>
               <span> {{ msg.subject.substring(0, 25) + "..." }} - </span>
               <span class="text-blue-400">

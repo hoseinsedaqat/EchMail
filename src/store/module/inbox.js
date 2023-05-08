@@ -1,6 +1,7 @@
 import { InboxMessages } from '@/constants/InboxMessages';
 import { useToast } from 'vue-toastification';
 import { defineStore } from 'pinia';
+import router from '@/router';
 const toast = useToast();
 
 
@@ -22,6 +23,11 @@ export const inbox = defineStore('inbox', {
                 this.starred = this.starred.filter(msg => msg.check !== true)
                 toast.success("Message Delete 😎✉")
             }
+        },
+        delete_msg_by_id(id) {
+            this.inbox = this.inbox.filter(msg => msg.id !== id)
+            router.push('/')
+            toast.success('Message Delete 😎✉')
         },
         add_starred(id) {
             this.inbox.map(msg => {

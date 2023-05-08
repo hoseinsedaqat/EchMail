@@ -17,20 +17,28 @@
         >
           <div class="grid grid-cols-3">
             <p class="w-12 m-3 text-center">
-              <img :src="GoogleCalendar" alt="GoogleCalendar" class="w-full" />
-              <span class="text-sm w-full">Calendar</span>
+              <router-link to="/calendar">
+                <img :src="GoogleCalendar" alt="GoogleCalendar" class="w-full" />
+                <span class="text-sm w-full">Calendar</span>
+              </router-link>
             </p>
             <p class="w-12 m-3 text-center">
-              <img :src="GoogleContacts" alt="GoogleContacts" class="w-full" />
-              <span class="text-sm w-full">Contacts</span>
+              <router-link to="/contacts">
+                <img :src="GoogleContacts" alt="GoogleContacts" class="w-full" />
+                <span class="text-sm w-full">Contacts</span>
+              </router-link>
             </p>
             <p class="w-12 m-3 text-center">
-              <img :src="GoogleKeep" alt="GoogleKeep" class="w-full" />
-              <span class="text-sm w-full">Keep</span>
+              <router-link to="/keep">
+                <img :src="GoogleKeep" alt="GoogleKeep" class="w-full" />
+                <span class="text-sm w-full">Keep</span>
+              </router-link>
             </p>
             <p class="w-12 m-3 text-center">
-              <img :src="GoogleTasks" alt="GoogleTasks" class="w-full" />
-              <span class="text-sm w-full">Tasks</span>
+              <router-link to="/keep">
+                <img :src="GoogleTasks" alt="GoogleTasks" class="w-full" />
+                <span class="text-sm w-full">Tasks</span>
+              </router-link>
             </p>
             <p class="w-12 m-3 text-center">
               <img :src="GoogleEarth" alt="GoogleEarth" class="w-full" />
@@ -45,8 +53,10 @@
               <span class="text-sm w-full">Photos</span>
             </p>
             <p class="w-12 m-3 text-center">
-              <img :src="GoogleGmail" alt="GoogleGmail" class="w-full" />
-              <span class="text-sm w-full">Gmail</span>
+              <router-link to="/">
+                <img :src="GoogleGmail" alt="GoogleGmail" class="w-full" />
+                <span class="text-sm w-full">Gmail</span>
+              </router-link>
             </p>
             <p class="w-12 m-3 text-center">
               <img :src="GoogleHome" alt="GoogleHome" class="w-full" />
@@ -80,8 +90,22 @@
           class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-96"
         >
           <div class="text-center">
-            <p class="my-2">Name: {{ setting_store.user_name }}</p>
-            <p class="my-2">Account: {{ setting_store.user_mail }}</p>
+            <p class="my-2">
+              Name:
+              {{
+                setting_store.user_name.length > 20
+                  ? setting_store.user_name.substring(0, 20) + "..."
+                  : setting_store.user_name
+              }}
+            </p>
+            <p class="my-2">
+              Account:
+              {{
+                setting_store.user_mail.length > 25
+                  ? setting_store.user_mail.substring(0, 25) + "..."
+                  : setting_store.user_mail
+              }}
+            </p>
             <button class="btn btn-info btn-sm my-2">Sign out</button>
           </div>
         </ul>

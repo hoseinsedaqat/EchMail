@@ -3,10 +3,11 @@
     <nav>
       <div class="cursor-pointer">
         <ArrowLeftIcon @click="back" />
-        <TrashIcon />
+        <TrashIcon v-if="diffrent_trash" @click="sents_store.delete_msg_by_id(route.params.id)"/>
+        <TrashIcon v-if="!diffrent_trash" @click="inbox_store.delete_msg_by_id(route.params.id)"/>
       </div>
       <div>
-        <p>1- 50 of 153</p>
+        <p>1- 50 of 200</p>
       </div>
     </nav>
     <article id="email-information" class="p-5">
@@ -45,7 +46,6 @@
 </template>
 
 <script setup>
-
 // import
 import TrashIcon from "vue-material-design-icons/TrashCanOutline.vue";
 import ArrowLeftIcon from "vue-material-design-icons/ArrowLeft.vue";
@@ -62,6 +62,7 @@ const message_data = ref({});
 const sents_store = sents();
 const router = useRouter();
 const route = useRoute();
+const diffrent_trash = ref(false);
 
 // methods
 const back = () => {
@@ -70,6 +71,9 @@ const back = () => {
 
 // mounted
 onMounted(() => {
+  if (window.location.pathname.includes("/sent")) {
+    diffrent_trash.value = true;
+  }
   sents_store.sents.forEach((msg) => {
     if (msg.id === route.params.id) {
       message_data.value = msg;

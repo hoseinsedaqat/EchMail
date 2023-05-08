@@ -15,7 +15,8 @@ const routes = [
     component: () => import('@/views/Calendar/CalendarView.vue')
   },
   {
-    path: '/message/:id',
+    // ? it's mean optional path
+    path: '/message/:path?/:id',
     name: 'MessageView',
     component: () => import('@/views/Message/MessageView.vue')
   },

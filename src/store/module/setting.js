@@ -20,6 +20,8 @@ export const setting = defineStore('setting', {
                 };
 
                 reader.readAsDataURL(e.target.files[0]);
+                toast.info('profile photo is uploaded 😎🤞')
+                closeModal();
             } catch (e) {
                 toast.info("Please Upload Image")
             }

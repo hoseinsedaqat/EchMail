@@ -4,7 +4,7 @@
       <TrashIcon/>
     </div>
     <div>
-      <p>1- 50 of 153</p>
+      <p>1- 50 of 200</p>
     </div>
   </nav>
   <article
