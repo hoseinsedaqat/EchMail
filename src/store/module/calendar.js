@@ -1,4 +1,6 @@
+import { useToast } from 'vue-toastification';
 import { defineStore } from 'pinia';
+const toast = useToast();
 
 export const calendar = defineStore('calendar', {
     state: () => ({
@@ -20,6 +22,7 @@ export const calendar = defineStore('calendar', {
                 endDate: this.end_date,
                 title: this.title
             });
+            toast.success('your item add to calendar 📆😎')
         }
     }
 })

@@ -38,7 +38,9 @@
         <button class="btn btn-primary w-full" @click="update_user_data">Sent</button>
       </div>
       <div class="text-center mt-5 w-full">
-        <label for="upload_img" class="btn btn-sm btn-success w-full"> Upload Img </label>
+        <label for="upload_img" class="btn btn-sm btn-success w-full">
+          <CloudUpload class="mx-2" /> Upload Img
+        </label>
         <input
           type="file"
           name="upload_img"
@@ -55,13 +57,12 @@
 <script setup>
 // import
 import { setting } from "@/store/module/setting";
+import CloudUpload from "vue-material-design-icons/CloudUpload.vue";
 import { useToast } from "vue-toastification";
 import { useForm } from "vee-validate";
 import { onMounted } from "vue";
 import * as yup from "yup";
 // data
-// const name = ref("");
-// const email = ref("");
 const setting_store = setting();
 const toast = useToast();
 // validate

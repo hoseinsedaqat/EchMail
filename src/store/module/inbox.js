@@ -26,6 +26,7 @@ export const inbox = defineStore('inbox', {
         },
         delete_msg_by_id(id) {
             this.inbox = this.inbox.filter(msg => msg.id !== id)
+            this.starred = this.starred.filter(msg => msg.id !== id)
             router.push('/')
             toast.success('Message Delete 😎✉')
         },
