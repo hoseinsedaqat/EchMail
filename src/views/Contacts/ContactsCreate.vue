@@ -13,6 +13,7 @@
           type="text"
           placeholder="First Name"
           class="input input-bordered w-full my-2"
+          name="first_name"
           v-model="first_name"
         />
       </div>
@@ -22,8 +23,9 @@
         </label>
         <input
           type="text"
-          placeholder="Change Your Last Name"
+          placeholder="Last Name"
           class="input input-bordered w-full my-2"
+          name="last_name"
           v-model="last_name"
         />
       </div>
@@ -33,15 +35,14 @@
         </label>
         <input
           type="text"
-          placeholder="Change Your Email"
+          placeholder="Email"
           class="input input-bordered w-full my-2"
+          name="email"
           v-model="email"
         />
       </div>
     </article>
-    <button class="btn btn-outline" @click="contacts_store.create_contacts(first_name,last_name,email)">
-      Create Contacts
-    </button>
+    <button class="btn btn-outline" @click="create_contacts()">Create Contacts</button>
   </section>
 </template>
 
@@ -49,10 +50,42 @@
 // import
 import AccountCircle from "vue-material-design-icons/AccountCircle.vue";
 import { contacts } from "@/store/module/contacts";
-import { ref } from "vue";
+import { useToast } from "vue-toastification";
+import { useForm } from "vee-validate";
+import * as yup from "yup";
 // data
-const first_name = ref("");
-const last_name = ref("");
-const email = ref("");
 const contacts_store = contacts();
+const toast = useToast();
+// validate
+const schema = yup.object({
+  first_name: yup.string().required().min(4),
+  last_name: yup.string().required().min(4),
+  email: yup.string().email().required(),
+});
+
+const { useFieldModel, validate } = useForm({
+  validationSchema: schema,
+});
+
+const [first_name, last_name, email] = useFieldModel([
+  "first_name",
+  "last_name",
+  "email",
+]);
+
+function create_contacts() {
+  validate().then((valid) => {
+    if (valid.valid) {
+      contacts_store.create_contacts(first_name.value, last_name.value, email.value);
+      toast.success("contact is create 👤😎");
+      first_name.value = "";
+      last_name.value = "";
+      email.value = "";
+    } else {
+      for (let error in valid.errors) {
+        toast.error(valid.errors[error]);
+      }
+    }
+  });
+}
 </script>
