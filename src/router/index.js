@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
+import activityRouter from '@/utils/checkRouteWidth';
 
 const routes = [
   {
@@ -50,11 +51,21 @@ const routes = [
     name: 'KeepCreateView',
     component: () => import('@/views/Keeps/KeepCreate.vue')
   },
+  {
+    path: '/compose/create',
+    name: 'ComposeView',
+    beforeEnter: activityRouter,
+    component: () => import('@/views/Compose/ComposeCreate.vue')
+  }
 
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+  // eslint-disable-next-line
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0, behavior: 'smooth' }
+  },
   routes
 })
 

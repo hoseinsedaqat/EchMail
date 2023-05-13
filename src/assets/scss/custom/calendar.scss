@@ -13,3 +13,24 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    #calendar {
+        height: 100%;
+        overflow: hidden;
+        & nav {
+            flex-direction: column;
+            align-items: flex-start;
+            div {
+                width: 100%;
+                margin: 0.2rem 0;
+                & .add_title_btn {
+                    margin: 1rem 0 0 0;
+                }
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -2,15 +2,16 @@
   <nav>
     <div>
       <p class="mx-1">Start Date</p>
-      <Datepicker v-model="calendar_store.start_date" />
+      <Datepicker v-model="calendar_store.start_date"/>
     </div>
     <div>
       <p class="mx-1">End Date</p>
-      <Datepicker v-model="calendar_store.end_date" />
+      <Datepicker v-model="calendar_store.end_date"/>
     </div>
     <div>
       <p>Title</p>
       <input
+    
         type="text"
         name="calendar_title"
         id="calendar_title"

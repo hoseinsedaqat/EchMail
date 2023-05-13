@@ -13,4 +13,37 @@
             box-shadow: 1px 3px 10px rgba(0,0,0,0.3);
         }
     }
+
+    & #starred-sm {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #starred {
+        height: 100%;
+        overflow: hidden;
+        font-size: 12px !important;
+        nav {
+            margin: 0 0.8rem;
+        }
+        div .time-text {
+            font-size: 10px !important;
+        }   
+
+        & #starred-lg {
+            display: none;
+        }
+
+        & #starred-sm {
+            display: grid;
+            & div:nth-child(1){
+                flex-direction: column;
+                input {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+    }
 }

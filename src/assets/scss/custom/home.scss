@@ -21,8 +21,21 @@
 }
 
 
-@media screen and (max-width:1407px){ 
+@media screen and (max-width:1200px){ 
     #home {
         height: 100vh;
+        #email-information main:nth-child(2) {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            div {
+                margin: 0.2rem 0;
+            }
+        }
+        #email-information main:nth-child(2) div{
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+        }
     }
 }

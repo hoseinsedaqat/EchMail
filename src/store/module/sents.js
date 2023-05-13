@@ -8,7 +8,17 @@ const toast = useToast();
 
 export const sents = defineStore('sents', {
     state: () => ({
-        sents: [],
+        sents: [
+            {
+                id: uuidv4(),
+                to: 'to',
+                subject: 'subject',
+                message: 'message',
+                time: moment().format('MMMM D h:mm a'),
+                check: false,
+                starred: false,
+            }
+        ],
         msg_box: false,
     }),
     getters: {

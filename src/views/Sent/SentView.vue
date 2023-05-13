@@ -10,12 +10,13 @@
         </div>
       </nav>
       <article
+        id="sent-lg"
         class="grid grid-cols-8 items-center p-3 cursor-pointer"
         v-for="(msg, idx) in sents_store.sents"
         :key="(msg, idx)"
       >
         <div class="flex items-center">
-          <input type="checkbox" class="checkbox checkbox-xs" v-model="msg.check"/>
+          <input type="checkbox" class="checkbox checkbox-xs" v-model="msg.check" />
           <!-- <StarIcon :color="'yellow'" class="mx-2" /> -->
         </div>
         <div class="col-span-2">
@@ -33,6 +34,32 @@
         </div>
         <div>
           <p class="text-sm">{{ msg.time }}</p>
+        </div>
+      </article>
+      <!-- sm -->
+      <article
+        id="sent-sm"
+        class="grid grid-cols-8 items-center p-3 cursor-pointer"
+        v-for="(msg, idx) in sents_store.sents"
+        :key="(msg, idx)"
+      >
+        <div class="flex items-center">
+          <input type="checkbox" class="checkbox checkbox-xs" v-model="msg.check" />
+          <!-- <StarIcon :color="'yellow'" class="mx-2" /> -->
+        </div>
+        <div class="col-span-5">
+          <p>{{ msg.to.substring(0, 15) + " ..." }}</p>
+          <router-link :to="'/message/sent/' + `${msg.id}`">
+            <p>
+              <span> {{ msg.subject.substring(0, 15) + "..." }} - </span>
+              <span class="text-blue-400">
+                {{ msg.message.substring(0, 10) + " ..." }}
+              </span>
+            </p>
+          </router-link>
+        </div>
+        <div class="col-span-2">
+          <p class="text-sm time-text">{{ msg.time }}</p>
         </div>
       </article>
     </div>

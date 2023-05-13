@@ -5,24 +5,39 @@
         <div>
           <MenuIcon @click="openNav" />
         </div>
-        <div>
-          <input type="text" placeholder="Search"/>
+        <div class="w-96">
+          <input type="text" placeholder="Search" class="w-full"/>
         </div>
         <div>
-          <img :src="setting_store.img" alt="user_profile_img" class="rounded-full w-12 h-12 cursor-pointer" />
+          <img
+            :src="setting_store.img"
+            alt="user_profile_img"
+            class="rounded-full w-12 h-12 cursor-pointer"
+          />
         </div>
       </main>
 
       <!-- menu content -->
       <div id="mySidenav" class="sidenav">
         <a @click="closeNav">&times;</a>
-        <a href="#">About</a>
+        <router-link to="/starred">Starred</router-link>
+        <router-link to="/calendar">Calendar</router-link>
+        <router-link to="/sent">Sent</router-link>
+        <router-link to="/">Inbox</router-link>
+        <router-link to="/compose/create">Compose</router-link>
         <a href="#">Services</a>
         <a href="#">Clients</a>
         <a href="#">Contact</a>
       </div>
     </nav>
   </header>
+  <button id="mobile-compose">
+    <router-link to="/compose/create">
+      <img
+        src="https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png"
+        alt=""
+    /></router-link>
+  </button>
 </template>
 
 <script setup>

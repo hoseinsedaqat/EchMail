@@ -36,6 +36,7 @@
       <p class="text-sm time-text">{{ msg.time }}</p>
     </div>
   </article>
+  <!-- sm -->
   <article
     id="inbox-sm"
     class="grid grid-cols-8 items-center p-3 cursor-pointer"
