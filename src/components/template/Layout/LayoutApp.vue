@@ -1,4 +1,5 @@
 <template>
+  <mobile-header></mobile-header>
   <div id="layout-app">
     <left-side-bar></left-side-bar>
     <inbox-layer></inbox-layer>
@@ -11,4 +12,5 @@
 import RightSideBar from "./components/RightSideBar.vue";
 import LeftSideBar from "./components/LeftSideBar.vue";
 import InboxLayer from "./components/InboxLayer.vue";
+import MobileHeader from '../mobile/MobileHeader.vue'
 </script>

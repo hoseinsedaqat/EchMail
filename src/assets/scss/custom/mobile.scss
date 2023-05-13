@@ -1,0 +1,78 @@
+#mobile {
+    display: none;
+    nav {
+        main {
+            padding: 0.2rem;
+            border-radius: 5px;
+            margin: 1rem 0.3rem;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            input {
+                border: none;
+                :focus {
+                    outline: none !important;
+                    border: none !important;
+                }
+            }
+        }
+        .sidenav {
+            font-size: 14px;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            // glass
+            background: rgba(255, 255, 255, 0.72);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            border: 1px solid rgba(255, 255, 255, 0.11);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .sidenav a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #333;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left 0.5s;
+            padding: 16px;
+        }
+    }
+}
+
+@media screen and (max-width:1407px) {
+    #mobile {
+        display: block;
+    }
+}
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}

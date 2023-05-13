@@ -42,7 +42,6 @@
             margin: 0.5rem 0;
             padding: 0.8rem 0.4rem;
             &:hover {
-                // background: $color_1;
                 border-radius: 20px;
                 cursor: pointer;
             }
@@ -90,6 +89,33 @@
                 width: 100%;
                 border: 1px solid #eee;
             }
+        }
+    }
+}
+
+// responsive
+
+@media screen and (max-width: 1407px) {
+    #n1 {
+        // width: $max-width;
+        display: none;
+        // position: static;
+        #left-aside-menu {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            .logo img {
+                margin: 0  0.7rem !important;
+            }
+            & button {
+                display: none;
+            }
+        }
+        .left-aside-container {
+            display: none;
+        }
+        .left-aside-container-sm {
+            display: none;
         }
     }
 }

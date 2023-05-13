@@ -21,3 +21,14 @@
         outline-offset: none;
     }
 }
+
+@media screen and (max-width: 1407px) {
+    #n2 {
+        width: $max-width;
+        margin: 0;
+        & div.form-control {
+            margin: 0 1rem;
+            display: none;
+        }
+    }
+}

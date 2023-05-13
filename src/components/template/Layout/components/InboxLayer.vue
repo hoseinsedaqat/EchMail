@@ -11,7 +11,7 @@
         </span>
       </label>
     </div>
-    <div class="bg-gray-50 my-3 rounded-md">
+    <div class="lg:bg-gray-50 md:bg-gray-50 sm:bg-light-50 my-3 rounded-md">
       <router-view></router-view>
     </div>
   </section>

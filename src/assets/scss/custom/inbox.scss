@@ -12,7 +12,7 @@
         }
     }
     article {
-        border: 1px solid #DDD;
+        // border: 1px solid #DDD;
         &:hover {
             box-shadow: 1px 3px 10px rgba(0,0,0,0.3);
         }
@@ -22,5 +22,38 @@
         display: $d-flex;
         align-items: $d-flex-center;
         justify-content: $d-flex-center;
+    }
+
+    & #inbox-sm {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1407px) {
+    #inbox {
+        height: 100%;
+        overflow: hidden;
+        font-size: 12px !important;
+        nav {
+            margin: 0 0.8rem;
+        }
+        div .time-text {
+            font-size: 10px !important;
+        }   
+
+        & #inbox-lg {
+            display: none;
+        }
+
+        & #inbox-sm {
+            display: grid;
+            & div:nth-child(1){
+                flex-direction: column;
+                input {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
     }
 }

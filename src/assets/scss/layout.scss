@@ -11,7 +11,11 @@ textarea {
     resize: none !important;
 }
 
-
+@media screen and (max-width:1407px) {
+    #layout-app {
+        flex-direction: column;
+    }
+}
 // @media screen and (max-width:1400px){
 //     #n1 {
 //         display:none !important;
