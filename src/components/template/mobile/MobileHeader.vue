@@ -5,7 +5,7 @@
         <div>
           <MenuIcon @click="openNav" />
         </div>
-        <div class="w-96">
+        <div class="md:w-full sm:w-60">
           <input type="text" placeholder="Search" class="w-full"/>
         </div>
         <div>
@@ -20,8 +20,10 @@
       <!-- menu content -->
       <div id="mySidenav" class="sidenav">
         <a @click="closeNav">&times;</a>
-        <router-link to="/starred">Starred</router-link>
+        <router-link to="/starred" @click="closeNav">Starred</router-link>
         <router-link to="/calendar">Calendar</router-link>
+        <router-link to="/keep">Keeps</router-link>
+        <router-link to="/contacts">Contacts</router-link>
         <router-link to="/sent">Sent</router-link>
         <router-link to="/">Inbox</router-link>
         <router-link to="/compose/create">Compose</router-link>

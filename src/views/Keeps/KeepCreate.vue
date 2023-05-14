@@ -5,7 +5,7 @@
       <p>Create Tasks</p>
     </div>
     <article class="grid grid-cols-4 gap-4">
-      <div class="form-control w-full my-2 col-span-4">
+      <div class="lg:form-control md:form-control w-full my-2 col-span-4">
         <label class="label">
           <span class="label-text">What's in your mind ?</span>
         </label>

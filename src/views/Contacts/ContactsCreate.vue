@@ -4,8 +4,8 @@
       <AccountCircle :size="100" />
       <p>Create Contacts</p>
     </div>
-    <article class="grid grid-cols-3 gap-4">
-      <div class="form-control w-full my-2">
+    <article class="grid lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 gap-4">
+      <div class="lg:form-control md:form-control w-full my-2">
         <label class="label">
           <span class="label-text">First Name</span>
         </label>
@@ -17,7 +17,7 @@
           v-model="first_name"
         />
       </div>
-      <div class="form-control w-full my-2">
+      <div class="lg:form-control md:form-control w-full my-2">
         <label class="label">
           <span class="label-text">Last Name</span>
         </label>
@@ -29,7 +29,7 @@
           v-model="last_name"
         />
       </div>
-      <div class="form-control w-full my-2">
+      <div class="lg:form-control md:form-control w-full my-2">
         <label class="label">
           <span class="label-text">Email</span>
         </label>
