@@ -21,3 +21,14 @@
     height: 80vh;
     overflow-y: auto;
 }
+
+
+@media screen and (max-width:1200px) {
+    #contacts {
+        word-break: break-all;
+        #contacts_view {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}

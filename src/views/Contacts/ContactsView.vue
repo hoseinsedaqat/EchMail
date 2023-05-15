@@ -14,7 +14,7 @@
         <button class="btn bg-sky-600 btn-sm text-white">+ Contact Create</button>
         </router-link>
       </div>
-      <div v-for="(contact,idx) in contacts_store.contacts" :key="(contact,idx)" class="flex items-center justify-between my-2 border-2 shadow-sm p-5 rounded box-shadow">
+      <div id="contacts_view" v-for="(contact,idx) in contacts_store.contacts" :key="(contact,idx)" class="flex items-center justify-between my-2 border-2 shadow-sm p-5 rounded box-shadow">
         <div>
           <AccountCircle :size="40" />
         </div>
