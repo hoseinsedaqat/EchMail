@@ -12,7 +12,7 @@
         <textarea
           name="keep_note"
           id="keep_note"
-          cols="30"
+          class="form-control w-full"
           rows="10"
           v-model="keep_note"
         ></textarea>

@@ -56,8 +56,13 @@ const routes = [
     name: 'ComposeView',
     beforeEnter: activityRouter,
     component: () => import('@/views/Compose/ComposeCreate.vue')
+  },
+  {
+    path: '/user/setting',
+    name: 'SetingView',
+    beforeEnter: activityRouter,
+    component: () => import('@/views/Setting/SettingView.vue')
   }
-
 ]
 
 const router = createRouter({

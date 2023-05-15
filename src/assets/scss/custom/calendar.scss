@@ -25,10 +25,15 @@
                 width: 100%;
                 margin: 0.2rem 0;
                 & .add_title_btn {
-                    margin: 1rem 0 0 0;
+                    margin: 0.5rem;
                 }
                 input {
-                    width: 100%;
+                    width: 90%;
+                    margin: 0 0.5rem;
+                }
+
+                &:nth-child(3) p {
+                    margin: 0 0.2rem;
                 }
             }
         }
