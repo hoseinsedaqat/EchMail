@@ -1,44 +1,44 @@
 #starred {
-    height: 80vh;
-    overflow-y: auto;
+    height: $hvh-80;
+    overflow-y: $overflow-y-auto;
     .empty {
-        height: 100%;
+        height: $max-width;
         display: $d-flex;
         align-items: $d-flex-center;
         justify-content: $d-flex-center;
     }
     article {
-        border: 1px solid #DDD;
+        border: 1px solid #ddd;
         &:hover {
-            box-shadow: 1px 3px 10px rgba(0,0,0,0.3);
+            box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
         }
     }
 
     & #starred-sm {
-        display: none;
+        display: $d-none;
     }
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
     #starred {
-        height: 100%;
-        overflow: hidden;
+        height: $max-width;
+        overflow: $overflow-hidden;
         font-size: 12px !important;
         nav {
             margin: 0 0.8rem;
         }
         div .time-text {
             font-size: 10px !important;
-        }   
+        }
 
         & #starred-lg {
-            display: none;
+            display: $d-none;
         }
 
         & #starred-sm {
-            display: grid;
-            & div:nth-child(1){
-                flex-direction: column;
+            display: $d-grid;
+            & div:nth-child(1) {
+                flex-direction: $d-flex-column;
                 input {
                     width: 12px;
                     height: 12px;

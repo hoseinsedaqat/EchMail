@@ -1,6 +1,6 @@
 // n3
 #n3 {
-    position: sticky;
+    position: $p-sticky;
     top: 5px;
     width: $w-15;
     margin: 1.5rem;
@@ -23,9 +23,9 @@
 
 @media screen and (max-width: 1200px) {
     #n3 {
-        display: none !important;
+        display: $d-none !important;
     }
     #my-modal-3 {
-        display: none;
+        display: $d-none;
     }
 }
