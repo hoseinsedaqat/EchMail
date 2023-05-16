@@ -1,8 +1,8 @@
 #contacts {
-    height: 80vh;
-    overflow-y: auto;
+    height: $hvh-80;
+    overflow-y: $overflow-y-auto;
     .empty {
-        height: 100%;
+        height: $max-width;
         display: $d-flex;
         align-items: $d-flex-center;
         justify-content: $d-flex-center;
@@ -18,17 +18,17 @@
 }
 
 #contacts_create {
-    height: 80vh;
-    overflow-y: auto;
+    height: $hvh-80;
+    overflow-y: $overflow-y-auto;
 }
 
-
-@media screen and (max-width:1200px) {
+// responsive
+@media screen and (max-width: 1200px) {
     #contacts {
-        word-break: break-all;
+        word-break: $word-breaks;
         #contacts_view {
-            flex-direction: column;
-            align-items: flex-start;
+            flex-direction: $d-flex-column;
+            align-items: $d-flex-start;
         }
     }
 }

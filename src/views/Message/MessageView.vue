@@ -3,8 +3,14 @@
     <nav>
       <div class="cursor-pointer">
         <ArrowLeftIcon @click="back" />
-        <TrashIcon v-if="diffrent_trash" @click="sents_store.delete_msg_by_id(route.params.id)"/>
-        <TrashIcon v-if="!diffrent_trash" @click="inbox_store.delete_msg_by_id(route.params.id)"/>
+        <TrashIcon
+          v-if="diffrent_trash"
+          @click="sents_store.delete_msg_by_id(route.params.id)"
+        />
+        <TrashIcon
+          v-if="!diffrent_trash"
+          @click="inbox_store.delete_msg_by_id(route.params.id)"
+        />
       </div>
       <div>
         <p>1- 50 of 200</p>
@@ -49,6 +55,7 @@
 // import
 import TrashIcon from "vue-material-design-icons/TrashCanOutline.vue";
 import ArrowLeftIcon from "vue-material-design-icons/ArrowLeft.vue";
+import { checkTextLength } from "@/utils/checkTextLength";
 import { setting } from "@/store/module/setting";
 import { useRoute, useRouter } from "vue-router";
 import { inbox } from "@/store/module/inbox";
@@ -77,11 +84,13 @@ onMounted(() => {
   sents_store.sents.forEach((msg) => {
     if (msg.id === route.params.id) {
       message_data.value = msg;
+      message_data.value.to = checkTextLength(message_data.value.to);
     }
   });
   inbox_store.inbox.forEach((msg) => {
     if (msg.id === route.params.id) {
       message_data.value = msg;
+      message_data.value.to = checkTextLength(message_data.value.to);
     }
   });
 });

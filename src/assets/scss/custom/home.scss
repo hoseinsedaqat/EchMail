@@ -1,7 +1,6 @@
-
 #home {
-    height: 80vh;
-    overflow-y: auto;
+    height: $hvh-80;
+    overflow-y: $overflow-y-auto;
     & nav {
         display: $d-flex;
         align-items: $d-flex-center;
@@ -20,22 +19,22 @@
     }
 }
 
-
-@media screen and (max-width:1200px){ 
+// responsive
+@media screen and (max-width: 1200px) {
     #home {
-        height: 100vh;
+        height: $hvh-100;
         #email-information main:nth-child(2) {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
+            display: $d-flex;
+            align-items: $d-flex-start;
+            flex-direction: $d-flex-column;
             div {
                 margin: 0.2rem 0;
             }
         }
-        #email-information main:nth-child(2) div{
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
+        #email-information main:nth-child(2) div {
+            display: $d-flex;
+            align-items: $d-flex-start;
+            flex-direction: $d-flex-column;
         }
     }
 }

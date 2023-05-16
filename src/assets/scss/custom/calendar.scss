@@ -1,6 +1,6 @@
 #calendar {
-    height: 80vh;
-    overflow-y: auto;
+    height: $hvh-80;
+    overflow-y: $overflow-y-auto;
     & nav {
         width: $max-width;
         display: $d-flex;
@@ -14,21 +14,22 @@
     }
 }
 
+// responsive
 @media screen and (max-width: 1200px) {
     #calendar {
-        height: 100%;
-        overflow: hidden;
+        height: $max-width;
+        overflow: $overflow-hidden;
         & nav {
-            flex-direction: column;
-            align-items: flex-start;
+            flex-direction: $d-flex-column;
+            align-items: $d-flex-start;
             div {
-                width: 100%;
+                width: $max-width;
                 margin: 0.2rem 0;
                 & .add_title_btn {
                     margin: 0.5rem;
                 }
                 input {
-                    width: 90%;
+                    width: $w-90;
                     margin: 0 0.5rem;
                 }
 

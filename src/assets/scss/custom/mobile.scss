@@ -1,19 +1,19 @@
 #mobile {
-    display: none;
+    display: $d-none;
     nav {
         main {
             padding: 0.2rem;
             border-radius: 5px;
             margin: 1rem 0.3rem;
             border: 1px solid #333;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            display: $d-flex;
+            align-items: $d-flex-center;
+            justify-content: $d-flex-between;
             input {
-                border: none;
+                border: $d-none;
                 :focus {
-                    outline: none !important;
-                    border: none !important;
+                    outline: $d-none !important;
+                    border: $d-none !important;
                 }
             }
             div {
@@ -22,9 +22,9 @@
         }
         .sidenav {
             font-size: 14px;
-            height: 100%;
+            height: $max-width;
             width: 0;
-            position: fixed;
+            position: $p-fixed;
             z-index: 1;
             top: 0;
             left: 0;
@@ -35,16 +35,16 @@
             backdrop-filter: blur(2px);
             -webkit-backdrop-filter: blur(2px);
             border: 1px solid rgba(255, 255, 255, 0.11);
-            overflow-x: hidden;
+            overflow-x: $overflow-hidden;
             transition: 0.5s;
         }
 
         .sidenav a {
-            text-decoration: none;
+            text-decoration: $d-none;
             font-size: 14px;
             margin: 1rem;
             color: #333;
-            display: block;
+            display: $d-block;
             transition: 0.3s;
         }
 
@@ -53,7 +53,7 @@
         }
 
         .sidenav .closebtn {
-            position: absolute;
+            position: $p-absolute;
             top: 0;
             right: 25px;
             font-size: 36px;
@@ -67,8 +67,8 @@
     }
 }
 #mobile-compose {
-    display: none;
-    position: fixed !important;
+    display: $d-none;
+    position: $p-fixed !important;
     bottom: 10px;
     right: 10px;
     background-color: #fff;
@@ -80,10 +80,10 @@
 
 @media screen and (max-width: 1200px) {
     #mobile {
-        display: block;
+        display: $d-block;
     }
-    #mobile-compose{
-        display: block;
+    #mobile-compose {
+        display: $d-block;
     }
 }
 @media screen and (max-height: 450px) {

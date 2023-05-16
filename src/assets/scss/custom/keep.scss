@@ -1,8 +1,8 @@
 #keep {
-    height: 80vh;
-    overflow-y: auto;
+    height: $hvh-80;
+    overflow-y: $overflow-y-auto;
     .empty {
-        height: 100%;
+        height: $max-width;
         display: $d-flex;
         align-items: $d-flex-center;
         justify-content: $d-flex-center;
@@ -18,6 +18,6 @@
 }
 
 #keep_create {
-    height: 80vh;
-    overflow-y: auto;
+    height: $hvh-80;
+    overflow-y: $overflow-y-auto;
 }

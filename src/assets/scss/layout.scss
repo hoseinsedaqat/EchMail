@@ -1,5 +1,10 @@
+// import customize css
 @import "_variables.scss";
 @import "_colors.scss";
+@import "display.scss";
+@import "_option.scss";
+@import "_size.scss";
+@import "_position.scss";
 
 #layout-app {
     width: $max-width;
@@ -8,28 +13,12 @@
 }
 
 textarea {
-    resize: none !important;
+    resize: $textarea_resize !important;
 }
 
-@media screen and (max-width:1200px) {
+// responsive
+@media screen and (max-width: 1200px) {
     #layout-app {
-        flex-direction: column;
+        flex-direction: $d-flex-column;
     }
 }
-// @media screen and (max-width:1400px){
-//     #n1 {
-//         display:none !important;
-//     }
-//     #n2 {
-//         width:100% !important;
-//         font-size: 10px !important;
-//         .time {
-//             font-size: 7px !important;
-//         }
-//     }
-//     #n3 {
-//         display:none !important;
-//     }
-// }
-
-// mobile from 1407 is start
