@@ -11,6 +11,6 @@
 // import
 import RightSideBar from "./components/RightSideBar.vue";
 import LeftSideBar from "./components/LeftSideBar.vue";
+import MobileHeader from "../mobile/MobileHeader.vue";
 import InboxLayer from "./components/InboxLayer.vue";
-import MobileHeader from '../mobile/MobileHeader.vue'
 </script>
