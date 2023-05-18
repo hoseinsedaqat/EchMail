@@ -56,8 +56,8 @@
 
 <script setup>
 // import
-import { setting } from "@/store/module/setting";
 import CloudUpload from "vue-material-design-icons/CloudUpload.vue";
+import { setting } from "@/store/module/setting";
 import { useToast } from "vue-toastification";
 import { useForm } from "vee-validate";
 import { onMounted } from "vue";
@@ -76,7 +76,7 @@ const { useFieldModel, validate } = useForm({
 });
 
 const [email, name] = useFieldModel(["email", "name"]);
-
+// methods
 function update_user_data() {
   validate().then((valid) => {
     if (valid.valid) {

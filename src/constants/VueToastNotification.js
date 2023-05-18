@@ -11,5 +11,4 @@ export const vue_toast_notification = {
     closeButton: "button",
     icon: true,
     rtl: false
-
 }

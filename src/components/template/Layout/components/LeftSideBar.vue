@@ -1,8 +1,10 @@
 <template>
   <section id="n1">
     <left-title></left-title>
+    <!-- Start lg and sm sidebar -->
     <left-aside-lg v-if="layout_store.aside"></left-aside-lg>
     <left-aside-sm v-else></left-aside-sm>
+    <!-- End lg and sm sidebar -->
     <left-new-message></left-new-message>
   </section>
 </template>
