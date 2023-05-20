@@ -106,7 +106,7 @@ export const InboxMessages = [
     {
         id: uuidv4(),
         to: 'anthony_sopranos@gmail.com',
-        subject: 'hey waht are you doing ?',
+        subject: 'hey what are you doing ?',
         message: `The red ball sat proudly at the top of the toybox. It had been the last to be played with and anticipated it would be the next as well. The other toys grumbled beneath. At one time each had held the spot of the red ball, but over time they had sunk deeper and deeper into the toy box.`,
         time: 'Oct 19 3:30 pm',
         check: false,

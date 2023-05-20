@@ -72,7 +72,7 @@ const [first_name, last_name, email] = useFieldModel([
   "last_name",
   "email",
 ]);
-
+// methods
 function create_contacts() {
   validate().then((valid) => {
     if (valid.valid) {
