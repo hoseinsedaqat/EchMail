@@ -16,6 +16,8 @@ import "vue-toastification/dist/index.css";
 
 import { vue_toast_notification } from '@/constants/VueToastNotification';
 
+import './registerServiceWorker';
+
 const app = createApp(App);
 
 app.use(Toast, vue_toast_notification);
