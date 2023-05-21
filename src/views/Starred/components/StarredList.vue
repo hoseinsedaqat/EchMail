@@ -1,12 +1,20 @@
 <template>
   <!-- we will bring it to components -->
-    <div>
-      <nav class="p-2">
-        <div class="cursor-pointer" @click="inbox_store.delete_msg">
-          <TrashIcon />
-        </div>
-      </nav>
-      <article
+  <div>
+    <nav class="p-2">
+      <div class="cursor-pointer" @click="inbox_store.delete_msg">
+        <TrashIcon />
+      </div>
+    </nav>
+    <list-model
+      :large_id="'starred-lg'"
+      :data="inbox_store.starred"
+      :small_id="'starred-sm'"
+      :links="'/message/sttared/'"
+      :add_sttared="inbox_store.add_starred"
+      :is_sttared="true"
+    ></list-model>
+    <!-- <article
         id="starred-lg"
         class="grid grid-cols-8 items-center p-3 cursor-pointer"
         v-for="(msg, idx) in inbox_store.starred"
@@ -36,9 +44,9 @@
         <div>
           <p class="text-sm">{{ msg.time }}</p>
         </div>
-      </article>
-      <!-- sm -->
-      <article
+      </article> -->
+    <!-- sm -->
+    <!-- <article
         id="starred-sm"
         class="grid grid-cols-8 items-center p-3 cursor-pointer"
         v-for="(msg, idx) in inbox_store.starred"
@@ -67,14 +75,15 @@
         <div class="col-span-2">
           <p class="text-sm time-text">{{ msg.time }}</p>
         </div>
-      </article>
-    </div>
+      </article> -->
+  </div>
 </template>
 
 <script setup>
 // import
 import TrashIcon from "vue-material-design-icons/TrashCanOutline.vue";
-import StarIcon from "vue-material-design-icons/StarOutline.vue";
+import ListModel from "@/components/model/ListModel.vue";
+// import StarIcon from "vue-material-design-icons/StarOutline.vue";
 import { inbox } from "@/store/module/inbox";
 // data
 const inbox_store = inbox();

@@ -5,7 +5,14 @@
         <TrashIcon />
       </div>
     </nav>
-    <article
+    <list-model
+      :large_id="'sent-lg'"
+      :data="sents_store.sents"
+      :small_id="'sent-sm'"
+      :links="'/message/sent/'"
+      :is_sttared="false"
+    ></list-model>
+    <!-- <article
       id="sent-lg"
       class="grid grid-cols-8 items-center p-3 cursor-pointer"
       v-for="(msg, idx) in sents_store.sents"
@@ -13,7 +20,7 @@
     >
       <div class="flex items-center">
         <input type="checkbox" class="checkbox checkbox-xs" v-model="msg.check" />
-        <!-- <StarIcon :color="'yellow'" class="mx-2" /> -->
+        <StarIcon :color="'yellow'" class="mx-2" />
       </div>
       <div class="col-span-2">
         <p>{{ msg.to.substring(0, 15) + " ..." }}</p>
@@ -31,9 +38,9 @@
       <div>
         <p class="text-sm">{{ msg.time }}</p>
       </div>
-    </article>
+    </article> -->
     <!-- sm -->
-    <article
+    <!-- <article
       id="sent-sm"
       class="grid grid-cols-8 items-center p-3 cursor-pointer"
       v-for="(msg, idx) in sents_store.sents"
@@ -41,7 +48,7 @@
     >
       <div class="flex items-center">
         <input type="checkbox" class="checkbox checkbox-xs" v-model="msg.check" />
-        <!-- <StarIcon :color="'yellow'" class="mx-2" /> -->
+        <StarIcon :color="'yellow'" class="mx-2" />
       </div>
       <div class="col-span-5">
         <p>{{ msg.to.substring(0, 15) + " ..." }}</p>
@@ -57,7 +64,7 @@
       <div class="col-span-2">
         <p class="text-sm time-text">{{ msg.time }}</p>
       </div>
-    </article>
+    </article> -->
   </div>
 </template>
 
@@ -65,6 +72,7 @@
 // import
 // import StarIcon from "vue-material-design-icons/StarOutline.vue";
 import TrashIcon from "vue-material-design-icons/TrashCanOutline.vue";
+import ListModel from "@/components/model/ListModel.vue";
 import { sents } from "@/store/module/sents";
 // data
 const sents_store = sents();
