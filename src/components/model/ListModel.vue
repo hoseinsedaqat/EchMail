@@ -2,6 +2,7 @@
   <article
     :id="props.large_id"
     class="grid grid-cols-8 items-center p-3 cursor-pointer"
+    :class="msg.view ? 'bg-white': ''"
     v-for="(msg, idx) in props.data"
     :key="(msg, idx)"
   >

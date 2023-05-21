@@ -12,6 +12,7 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
     {
         id: uuidv4(),
@@ -22,6 +23,7 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
     {
         id: uuidv4(),
@@ -32,6 +34,7 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
     {
         id: uuidv4(),
@@ -42,6 +45,7 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
     {
         id: uuidv4(),
@@ -52,6 +56,7 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
     {
         id: uuidv4(),
@@ -62,6 +67,7 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
     {
         id: uuidv4(),
@@ -72,6 +78,7 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
     {
         id: uuidv4(),
@@ -82,6 +89,7 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
     {
         id: uuidv4(),
@@ -102,6 +110,7 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
     {
         id: uuidv4(),
@@ -112,6 +121,7 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
     {
         id: uuidv4(),
@@ -122,5 +132,6 @@ export const InboxMessages = [
         check: false,
         starred: false,
         from: true,
+        view: false,
     },
 ]

@@ -36,6 +36,7 @@ export const sents = defineStore('sents', {
                 time: moment().format('MMMM D h:mm a'),
                 check: false,
                 starred: false,
+                view: false,
             });
             this.msg_box = false;
             router.push('/sent');

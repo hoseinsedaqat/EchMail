@@ -84,12 +84,14 @@ onMounted(() => {
   sents_store.sents.forEach((msg) => {
     if (msg.id === route.params.id) {
       message_data.value = msg;
+      msg.view = true;
       message_data.value.to = checkTextLength(message_data.value.to);
     }
   });
   inbox_store.inbox.forEach((msg) => {
     if (msg.id === route.params.id) {
       message_data.value = msg;
+      msg.view = true;
       message_data.value.to = checkTextLength(message_data.value.to);
     }
   });
