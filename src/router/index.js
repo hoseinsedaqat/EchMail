@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import activityRouter from '@/utils/checkRouteWidth';
 
-const routes = [
+export const routes = [
   {
     path: '/',
     name: 'InboxView',
