@@ -5,8 +5,8 @@ module.exports = defineConfig({
     name: 'Echmail design by Hosein Sedaqat',
     themeColor: "#fff",
     iconPaths: {
-      favicon32: 'img/icons/favicon-32x32.png',
-      favicon16: 'img/icons/favicon-16x16.png',
+      favicon32: 'img/icons/favicon.ico',
+      favicon16: 'img/icons/favicon.ico',
       appleTouchIcon: 'img/icons/apple-icon-72x72.png',
       msTileImage: 'img/icons/apple-icon-144x144.png'
     },
