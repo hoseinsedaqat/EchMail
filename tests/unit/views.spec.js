@@ -21,7 +21,7 @@ beforeEach(() => {
   setActivePinia(createPinia())
 })
 
-test('routing', async () => {
+test('views', async () => {
   router.push('/')
 
   // After this line, router is ready
