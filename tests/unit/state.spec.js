@@ -6,7 +6,10 @@ beforeEach(() => {
     setActivePinia(createPinia())
 })
 
-test('pinia state', () => {
+test('pinia 🍍 state', () => {
+
     const setting_store = setting();
-    expect(setting_store.user_name).toBe('Hosein Sedaqat')
+
+    expect(setting_store.user_name).toBe('Hosein Sedaqat');
+
 })
