@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+
 import activityRouter from '@/utils/checkRouteWidth';
 
 export const routes = [
