@@ -12,6 +12,13 @@
       class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-96"
     >
       <div class="text-center">
+        <div class="my-2 text-center w-full flex items-center justify-center">
+          <img
+            :src="setting_store.img"
+            alt="user-profile"
+            class="rounded-full w-20 h-20 cursor-pointer"
+          />
+        </div>
         <p class="my-2">
           Name:
           {{
@@ -35,7 +42,7 @@
 </template>
 
 <script setup>
-// impport
+// import
 import user_img from "@/assets/media/img/71232870.jpg";
 import { setting } from "@/store/module/setting";
 import { onMounted } from "vue";

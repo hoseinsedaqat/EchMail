@@ -1,6 +1,13 @@
 <template>
   <section id="setting">
     <div class="mx-2">
+      <div class="my-2 text-center w-full flex items-center justify-center">
+        <img
+          :src="setting_store.img"
+          alt="user-profile"
+          class="rounded-full w-32 h-32 cursor-pointer"
+        />
+      </div>
       <div class="w-full my-2">
         <label class="label">
           <span class="label-text">Name</span>
@@ -27,7 +34,7 @@
       </div>
       <button class="btn btn-primary w-full" @click="update_user_data">Sent</button>
     </div>
-    <div class="text-center mt-5 w-full">
+    <div class="text-center mt-5 mx-2">
       <label for="upload_img" class="btn btn-sm btn-success w-full">
         <CloudUpload class="mx-2" /> Upload Img
       </label>
@@ -65,7 +72,7 @@ const { useFieldModel, validate } = useForm({
 });
 
 const [email, name] = useFieldModel(["email", "name"]);
-
+// methods
 function update_user_data() {
   validate().then((valid) => {
     if (valid.valid) {
