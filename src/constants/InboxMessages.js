@@ -1,10 +1,8 @@
-import { v4 as uuidv4 } from 'uuid';
 import moment from 'moment/moment';
 
 export const InboxMessages = [
-    // i will add view for change bg-color of each msg
     {
-        id: uuidv4(),
+        id: '13d42f64-258b-4bd5-a432-06ee4491c4d9',
         to: '77hosein88@gmail.com',
         subject: 'This is Test',
         message: 'Test Gamil Clone Successfully ✌',
@@ -15,7 +13,7 @@ export const InboxMessages = [
         view: false,
     },
     {
-        id: uuidv4(),
+        id: '18d39ed0-fb4b-4137-bec3-beff30110290',
         to: 'justin_rezaei@gmail.com',
         subject: 'this is test',
         message: 'gmail clone',
@@ -26,7 +24,7 @@ export const InboxMessages = [
         view: false,
     },
     {
-        id: uuidv4(),
+        id: '8900adf9-e113-45b5-825b-1db2ed354721',
         to: 'brad_traversy@gmail.com',
         subject: 'vue_3_course',
         message: 'Hello Hosein We are Record New Vue Course Do you wanna to Join Sir ?',
@@ -37,7 +35,7 @@ export const InboxMessages = [
         view: false,
     },
     {
-        id: uuidv4(),
+        id: '9117ea2f-4f17-4861-ae1b-ec8f8ec4070d',
         to: 'john_week_devs@gmail.com',
         subject: 'New Awesome Project',
         message: 'Heyyy yooooo check out my new Project is Awesome dude 🍕😎',
@@ -48,7 +46,7 @@ export const InboxMessages = [
         view: false,
     },
     {
-        id: uuidv4(),
+        id: 'd114d971-bcb8-47a2-b742-cd0bdf13c901',
         to: 'evanyoooooouuuxxx@gmail.com',
         subject: 'new release',
         message: 'we are resolve the bug asap i will tell in next days',
@@ -59,7 +57,7 @@ export const InboxMessages = [
         view: false,
     },
     {
-        id: uuidv4(),
+        id: '61bfa464-33df-4722-9085-36df6cb457e7',
         to: 'zoheir@gmail.com',
         subject: 'new project',
         message: 'The red line moved across the page. With each millimeter it advanced forward, something changed in the room. The actual change taking place was difficult to perceive, but the change was real. The red line continued relentlessly across the page and the room would never be the same.',
@@ -70,7 +68,7 @@ export const InboxMessages = [
         view: false,
     },
     {
-        id: uuidv4(),
+        id: '5ff38d8f-ebfa-44a5-af47-347fbb7ef5cd',
         to: 'siavash@gmail.com',
         subject: 'this is siavash',
         message: 'It was easy to spot her. All you needed to do was look at her socks. They were never a matching pair. One would be green while the other would be blue. One would reach her knee while the other barely touched her ankle. Every other part of her was perfect, but never the socks. They were her micro act of rebellion.',
@@ -81,7 +79,7 @@ export const InboxMessages = [
         view: false,
     },
     {
-        id: uuidv4(),
+        id: 'c59a17cb-4020-4872-912d-0c13236bfa0d',
         to: 'caseyneistat@gmail.com',
         subject: 'new vlog release',
         message: `It wasn't quite yet time to panic. There was still time to salvage the situation. At least that is what she was telling himself. The reality was that it was time to panic and there wasn't time to salvage the situation, but he continued to delude himself into believing there was.`,
@@ -92,7 +90,7 @@ export const InboxMessages = [
         view: false,
     },
     {
-        id: uuidv4(),
+        id: '1da81f5a-a0fd-4c26-85dc-a5333e353d3d',
         to: 'amirazimidev@gmail.com',
         subject: 'new course release',
         message: `Greg understood that this situation would make Michael terribly uncomfortable. Michael simply had no idea what was about to come and even though Greg could prevent it from happening, he opted to let it happen. It was quite ironic, really. It was something Greg had said he would never wish upon anyone a million times, yet here he was knowingly letting it happen to one of his best friends. He rationalized that it would ultimately make Michael a better person and that no matter how uncomfortable, everyone should experience racism at least once in their lifetime.`,
@@ -102,7 +100,7 @@ export const InboxMessages = [
         from: true,
     },
     {
-        id: uuidv4(),
+        id: '4c512ddd-c151-45e8-858d-b0153d46455f',
         to: 'abednaseri@gmail.com',
         subject: 'new youtube video',
         message: `There was a leak in the boat. Nobody had yet noticed it, and nobody would for the next couple of hours. This was a problem since the boat was heading out to sea and while the leak was quite small at the moment, it would be much larger when it was ultimately discovered. John had planned it exactly this way.`,
@@ -113,7 +111,7 @@ export const InboxMessages = [
         view: false,
     },
     {
-        id: uuidv4(),
+        id: '63df75d0-3e45-476c-8f26-75d2c5856c93',
         to: 'anthony_sopranos@gmail.com',
         subject: 'hey what are you doing ?',
         message: `The red ball sat proudly at the top of the toybox. It had been the last to be played with and anticipated it would be the next as well. The other toys grumbled beneath. At one time each had held the spot of the red ball, but over time they had sunk deeper and deeper into the toy box.`,
@@ -124,7 +122,7 @@ export const InboxMessages = [
         view: false,
     },
     {
-        id: uuidv4(),
+        id: '7a9ce9ad-2374-4cf3-b882-825029cb76e0',
         to: 'rana@gmail.com',
         subject: 'hello this is rana',
         message: `There was something beautiful in his hate. It wasn't the hate itself as it was a disgusting display of racism and intolerance. It was what propelled the hate and the fact that although he had this hate, he didn't understand where it came from. It was at that moment that she realized that there was hope in changing him.`,
