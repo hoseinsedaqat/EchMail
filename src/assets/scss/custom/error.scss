@@ -1,0 +1,10 @@
+#error-down {
+    height: $hvh-80;
+}
+
+// responsive
+@media screen and (max-width: 1200px) {
+    #error-down {
+        height: $max-width;
+    }
+}

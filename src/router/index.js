@@ -60,6 +60,11 @@ export const routes = [
     name: 'SetingView',
     beforeEnter: activityRouter,
     component: () => import('@/views/Setting/SettingView.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'ErrorView',
+    component: () => import('@/views/Error/ErrorView.vue')
   }
 ]
 
