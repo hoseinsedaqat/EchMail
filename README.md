@@ -1,7 +1,7 @@
 # Echmail 📧🍍😎
 
 <div align="center">
-  <img width=100% height="100%" src="https://user-images.githubusercontent.com/71232870/236755573-3f7d030f-5f30-4e70-8ea4-10f5f67546e6.png" />
+  <img width=100% height="100%" src="https://github-production-user-asset-6210df.s3.amazonaws.com/71232870/242247596-36d6b150-a7ec-4016-bf7b-588d401628d7.png" />
 </div>
 
 ## Project setup

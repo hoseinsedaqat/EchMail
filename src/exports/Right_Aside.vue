@@ -10,6 +10,7 @@
         <p class="mx-3">{{ features.title }}</p>
       </router-link>
     </div>
+    <p class="mx-2 who-is-created font-bold mt-2">&copy; Echmail - Hosein Sedaqat 2023</p>
   </aside>
 </template>
 

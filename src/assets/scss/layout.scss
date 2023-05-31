@@ -16,9 +16,18 @@ textarea {
     resize: $textarea_resize !important;
 }
 
+.who-is-created {
+    width: 100%;
+    font-size: 10px;
+}
+
 // responsive
 @media screen and (max-width: 1200px) {
     #layout-app {
         flex-direction: $d-flex-column;
+    }
+
+    .who-is-created {
+        display: none;
     }
 }
