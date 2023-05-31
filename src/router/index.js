@@ -6,65 +6,65 @@ export const routes = [
   {
     path: '/',
     name: 'InboxView',
-    component: () => import('@/views/Inbox/InboxView.vue')
+    component: async () => await import('@/views/Inbox/InboxView.vue')
   },
   {
     path: '/calendar',
     name: 'CalendarView',
-    component: () => import('@/views/Calendar/CalendarView.vue')
+    component: async () => await import('@/views/Calendar/CalendarView.vue')
   },
   {
     // ? it's mean optional path
     path: '/message/:path?/:id',
     name: 'MessageView',
-    component: () => import('@/views/Message/MessageView.vue')
+    component: async () => await import('@/views/Message/MessageView.vue')
   },
   {
     path: '/starred',
     name: 'StarredView',
-    component: () => import('@/views/Starred/StarredView.vue')
+    component: async () => await import('@/views/Starred/StarredView.vue')
   },
   {
     path: '/sent',
     name: 'SentView',
-    component: () => import('@/views/Sent/SentView.vue')
+    component: async () => await import('@/views/Sent/SentView.vue')
   },
   {
     path: '/contacts',
     name: 'ContactsView',
-    component: () => import('@/views/Contacts/ContactsView.vue')
+    component: async () => await import('@/views/Contacts/ContactsView.vue')
   },
   {
     path: '/contact/create',
     name: 'ContactCreateView',
-    component: () => import('@/views/Contacts/ContactsCreate.vue')
+    component: async () => await import('@/views/Contacts/ContactsCreate.vue')
   },
   {
     path: '/keep',
     name: 'KeepView',
-    component: () => import('@/views/Keeps/KeepView.vue')
+    component: async () => await import('@/views/Keeps/KeepView.vue')
   },
   {
     path: '/keep/create',
     name: 'KeepCreateView',
-    component: () => import('@/views/Keeps/KeepCreate.vue')
+    component: async () => await import('@/views/Keeps/KeepCreate.vue')
   },
   {
     path: '/compose/create',
     name: 'ComposeView',
     beforeEnter: activityRouter,
-    component: () => import('@/views/Compose/ComposeCreate.vue')
+    component: async () => await import('@/views/Compose/ComposeCreate.vue')
   },
   {
     path: '/user/setting',
     name: 'SetingView',
     beforeEnter: activityRouter,
-    component: () => import('@/views/Setting/SettingView.vue')
+    component: async () => await import('@/views/Setting/SettingView.vue')
   },
   {
     path: '/:pathMatch(.*)*',
     name: 'ErrorView',
-    component: () => import('@/views/Error/ErrorView.vue')
+    component: async () => await import('@/views/Error/ErrorView.vue')
   }
 ]
 
